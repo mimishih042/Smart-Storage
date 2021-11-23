@@ -181,6 +181,47 @@ hr {
     transform: scale(1);
 }
 
+/*delete button*/
+.delete-btn {
+    height: 28px;
+    width: 28px;
+    left: 1020px;
+    top: 1441px;
+    border-radius: 14px;
+    background: #9F2733;
+    border: none;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    font: 13px Arial, sans-serif
+}
+
+/*add button*/
+.add-btn {
+    height: 28px;
+    width: 28px;
+    left: 1020px;
+    top: 1441px;
+    border-radius: 14px;
+    background: #3AA14C;
+    border: none;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    font: 13px Arial, sans-serif
+
+}
+
+.plusMinusSign {
+    line-height: 100%;
+    font-size : 1.5rem;
+}
+
+
 /* navbar style */
 .navbar-elem {
     align-items: center;
@@ -189,4 +230,94 @@ hr {
 .navbar-p {
     font-size: 0.8rem;
     color: #804F1E;
+}
+
+.input-counter {
+    max-width: 150px;
+    min-width: 150px;
+    text-align: center;
+    position: relative;
+}
+.input-counter span {
+    top: 0;
+    width: 40px;
+    height: 100%;
+    font-size: 15px;
+    cursor: pointer;
+    line-height: 50px;
+    position: absolute;
+    color: #804F1E;
+    background-color: transparent;
+}
+.input-counter span.minus-btn {
+    left: 0;
+    line-height: 45px;
+    border-right: 1px solid #804F1E;
+}
+.input-counter span.plus-btn {
+    right: 0;
+    line-height: 45px;
+    border-left: 1px solid #804f1e;
+
+}
+.input-counter span:hover {
+    color: #804F1E;
+}
+.input-counter input {
+    outline: 0;
+    width: 100%;
+    height: 47px;
+    display: block;
+    text-align: center;
+    color: #804F1E;
+    font-size: 17px;
+    font-weight: 600;
+    border: 1px solid #804F1E;
+    border-radius: 50px;
+}
+
+.purchased-container {
+    margin: 0 auto;
+}
+
+.purchased-btn {
+    position: relative;
+}
+
+.purchased-btn label {
+    background-color: #fff;
+    border: 1px solid #FF5E00;
+    border-radius: 50%;
+    height: 28px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 28px;
+}
+
+.purchased-btn label:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    left: 7px;
+    opacity: 0;
+    position: absolute;
+    top: 8px;
+    transform: rotate(-45deg);
+    width: 12px;
+}
+
+.purchased-btn input[type="checkbox"] {
+    visibility: hidden;
+}
+
+.purchased-btn input[type="checkbox"]:checked + label {
+    background-color: #FF5E00;
+    border-color: #FF5E00;
+}
+
+.purchased-btn input[type="checkbox"]:checked + label:after {
+    opacity: 1;
 }
