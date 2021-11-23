@@ -148,13 +148,19 @@
                                 </p>
                             </form>
                         </div>
-                        <div>
-                        <!-- Delete Button -->
-                            <p class="style-guide-p">DELETE</p>
-                            <button type="button" class="delete-btn plusMinusSign"> &#8211;</button>
-                        <!-- Add Button -->
-                            <p class="style-guide-p">ADD</p>
-                            <button type="button" class="add-btn plusMinusSign">&#xFF0B;</button>
+                        <div class="row">
+                            <!-- Delete Button -->
+                            <div class="col-6">
+                                <p class="style-guide-p">DELETE</p>
+                                <button type="button" class="delete-btn plusMinusSign"> &#8211;</button>
+                            </div>
+                            
+                            <!-- Add Button -->
+                            <div class="col-6">
+                                <p class="style-guide-p">ADD</p>
+                                <button type="button" class="add-btn plusMinusSign">&#xFF0B;</button>
+                            </div>
+                            
                         </div>
                     </div>
                     <div class="col-md-3 col-12">
@@ -162,7 +168,7 @@
                             <p class="style-guide-p">BACK BUTTON</p>
                             <img src="./assets/back_btn.png" class="back-btn">
                         </div>
-                        <div>
+                        <div class="mt-3">
                             <p class="style-guide-p">INCREASE/ DECREASE</p>
                             <div class="input-counter">
                                 <span class="minus-btn">-</span>
@@ -171,7 +177,7 @@
                             </div>
                         </div>
                         <!-- Purchased Button -->
-                        <div>
+                        <div class="mt-3">
                             <p class="style-guide-p">PURCHASED</p>
                             <div class="purchased-container">
                                 <div class="purchased-btn">
@@ -202,36 +208,42 @@
                         <p class="style-guide-p">CALENDAR</p>
                     </div>
                     
-                    <div class="year-table">
-                        <year href="#">&laquo;</year>
-                        <year href="#">2019</year>
-                        <year class="active" href="#">2020</year>
-                        <year href="#">2021</year>
-                        <year href="#">&raquo;</year>
-                    </div>
-                    <table class="month-table">
-                        <tr>
-                            <td tabindex="-1">JAN</td>
-                            <td tabindex="-1">FEB</td>
-                            <td tabindex="-1">MAR</td>
-                        </tr>
-                        <tr>
-                            <td tabindex="-1">APR</td>
-                            <td tabindex="-1">MAY</td>
-                            <td tabindex="-1">JUN</td>
-                        </tr>
-                        <tr>
-                            <td tabindex="-1">JUL</td>
-                            <td tabindex="-1">AUG</td>
-                            <td tabindex="-1">SEP</td>
-                        </tr>
-                        <tr>
-                            <td tabindex="-1">OCT</td>
-                            <td tabindex="-1">NOV</td>
-                            <td tabindex="-1">DEC</td>
-                        </tr>
-                    
-                    </table>
+                    <div class="col-md-10 col-12">
+                        <div class="year-table">
+                            <year href="#">&laquo;</year>
+                            <year href="#">2019</year>
+                            <year class="active" href="#">2020</year>
+                            <year href="#">2021</year>
+                            <year href="#">&raquo;</year>
+                        </div>
+
+                        <div class="month-table-container mt-3">
+                            <table class="month-table">
+                                <tr>
+                                    <td tabindex="-1">JAN</td>
+                                    <td tabindex="-1" autofocus>FEB</td>
+                                    <td tabindex="-1">MAR</td>
+                                </tr>
+                                <tr>
+                                    <td tabindex="-1">APR</td>
+                                    <td tabindex="-1">MAY</td>
+                                    <td tabindex="-1">JUN</td>
+                                </tr>
+                                <tr>
+                                    <td tabindex="-1">JUL</td>
+                                    <td tabindex="-1">AUG</td>
+                                    <td tabindex="-1">SEP</td>
+                                </tr>
+                                <tr>
+                                    <td tabindex="-1">OCT</td>
+                                    <td tabindex="-1">NOV</td>
+                                    <td tabindex="-1">DEC</td>
+                                </tr>
+                            
+                            </table>
+                        </div>
+                        
+                    </div> 
                 </div>
               
 
@@ -239,15 +251,17 @@
                     <div class="col-md-2 col-12">
                         <p class="style-guide-p">PAGINATION</p>
                     </div>
-                    <div class="pagination">
-                        <page href="#">&laquo;</page>
-                        <page href="#">1</page>
-                        <page class="active" href="#">2</page>
-                        <page href="#">3</page>
-                        <page href="#">...</page>
-                        <page href="#">9</page>
-                        <page href="#">10</page>
-                        <page href="#">&raquo;</page>
+                    <div class="col-md-10 col-12">
+                        <div class="pagination">
+                            <page href="#">&laquo;</page>
+                            <page href="#">1</page>
+                            <page class="active" href="#">2</page>
+                            <page href="#">3</page>
+                            <page href="#">...</page>
+                            <page href="#">9</page>
+                            <page href="#">10</page>
+                            <page href="#">&raquo;</page>
+                        </div>
                     </div>
                 </div>
 
