@@ -327,6 +327,20 @@ hr {
     width: 28px;
 }
 
+.purchased-btn label:before {
+    border: 2px solid lightgray;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    left: 7px;
+    opacity: 1;
+    position: absolute;
+    top: 8px;
+    transform: rotate(-45deg);
+    width: 12px;
+}
+
 .purchased-btn label:after {
     border: 2px solid #fff;
     border-top: none;
@@ -352,7 +366,6 @@ hr {
 
 .purchased-btn input[type="checkbox"]:checked + label:after {
     opacity: 1;
-    margin-top: 5px;
 }
 
 .navbar-p-clicked {
