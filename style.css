@@ -25,42 +25,50 @@ body {
 h1 {
     font-size: 3rem;
     font-family: MigraBold;
+    color: #804F1E;
 }
 
 h2 {
     font-size: 2rem;
     font-family: MigraBold;
+    color: #804F1E;
 }
 
 h3 {
     font-size: 2rem;
     font-family: MigraReg;
+    color: #804F1E;
 }
 
 h4 {
     font-size: 1.5rem;
     font-family: MigraReg;
+    color: #804F1E;
 }
 
 h5 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
+    color: #804F1E;
 }
 
 h6 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-family: 'Roboto', sans-serif;
+    color: #804F1E;
 }
 
 p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: 'Roboto', sans-serif;
+    color: #804F1E;
 }
 
 small {
     font-size: 0.8rem;
     font-family: 'Roboto', sans-serif;
+    color: #804F1E;
 }
 
 hr {
@@ -82,6 +90,12 @@ hr {
 .color-block {
     width: 100px;
     height: 100px;
+    margin-bottom: 5px;
+}
+
+.color-block-secondary {
+    width: 150px;
+    height: 50px;
     margin-bottom: 5px;
 }
 
@@ -223,8 +237,26 @@ hr {
 
 
 /* navbar style */
+.ss-navbar {
+    display: inline-block;
+    width: 400px;
+    padding: 1rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: white;
+    box-shadow: 0px -4px 10px 5px #adadad14;
+}
+
 .navbar-elem {
     align-items: center;
+    text-align: center; 
+    cursor: pointer;
+    float: left;
+    width: 25%;
+}
+
+.navbar-elem-clicked {
+    filter: invert(42%) sepia(93%) saturate(1370%) hue-rotate(335deg) brightness(100%) contrast(100%);
 }
 
 .navbar-p {
@@ -320,4 +352,32 @@ hr {
 
 .purchased-btn input[type="checkbox"]:checked + label:after {
     opacity: 1;
+    margin-top: 5px;
+}
+
+.navbar-p-clicked {
+    color: #FF5E00;
+}
+
+/* dialog style */
+.dialog-elem {
+    width: 300px;
+    text-align: center; 
+}
+
+.dialog-elem img {
+    z-index: 100;
+    position: relative;
+}
+
+.dialog-space {
+    position: relative;
+    top: -30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0px 7px 4px 4px #9d9d9d0f;
 }
