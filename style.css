@@ -368,6 +368,72 @@ hr {
     opacity: 1;
 }
 
+.datepicker {
+    position: relative;
+    width: auto;
+    clear: both;
+    border: none;
+    border-radius: 5px;
+    padding: 0;
+    background-color: #FFF4E9;
+    color: #804F1E;
+}
+
+.datepicker table.month-table {
+    border-radius: 5px;
+}
+
+.datepicker table.month-table td {
+    text-align: center;
+}
+  
+.datepicker table.month-table td {
+    padding: 3px;
+    line-height: inherit;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    border: 1px solid #804F1E;
+    font-size: 15px;
+    background: #FFF4E9;
+}
+  
+.datepicker table.month-table td.disabled {
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid #804F1E;
+    height: 41px;
+    width: 41px;
+  }
+  
+
+.datepicker table.month-table td:focus {
+    padding: 1px;
+    outline: 0;
+    background-color: #FF5E00;
+}
+
+
+.pagination {
+    display: inline-block;
+  }
+  
+.pagination a {
+    color: #804F1E;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #DFE3E8;
+    border-radius: 5px;
+}
+
+.pagination a.active {
+    border: 1px solid #804F1E;
+    background-color: #FFF4E9;
+    border-radius: 5px;
+}
+  
+
 .navbar-p-clicked {
     color: #FF5E00;
 }
