@@ -326,7 +326,7 @@ hr {
 }
 
 .purchased-btn label:before {
-    border: 2px solid lightgray;
+    border: 2px solid #DEDEDE;
     border-top: none;
     border-right: none;
     content: "";
@@ -527,7 +527,7 @@ table.list-table .input-counter input {
 .tab {
     overflow: hidden;
     border: none;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #DEDEDE;
     width: 25%;
 }
   
@@ -560,7 +560,7 @@ table.recipe-table {
 table.recipe-table td {
     text-align: left;
     padding: 8px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid#DEDEDE;
 }
 
   
