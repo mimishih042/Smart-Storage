@@ -532,7 +532,7 @@ table.list-table .input-counter input {
 }
   
   /* Style the buttons that are used to open the tab content */
-  .tab button {
+.tab button {
     background-color: inherit;
     float: left;
     border: none;
@@ -540,11 +540,27 @@ table.list-table .input-counter input {
     padding: 14px 16px;
     transition: 0.3s;
     color: #6D3805;
-  }
+}
   
   /* Create an active/current tablink class */
-  .tab button.active {
+.tab button.active {
     color: #FF5E00;
     border-bottom: 2px solid #FF5E00;
-  }
+}
+
+table.recipe-table {
+    border-collapse: collapse;
+    width: 80%;
+    border:none;
+    border-top: 1px solid #6D3805;
+    padding: 1rem;
+    color: #804F1E;
+}
+  
+table.recipe-table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid lightgray;
+}
+
   
