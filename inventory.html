@@ -13,28 +13,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
         <link href="./style.css" rel="stylesheet" />
         <script>
-            /*
-            $(function() {
-
-                $('label').click('change', function (v) {
-                    if($(this).is(':checked')) {
-                        console.log("checked");
-                    } else {
-                        console.log("not checked");
-                    }
-                });
-
-                });
-            console.log("xxx");
-            */
           
-         
           function decideBtnColor() {
             var selected =  document.querySelectorAll('input[type="checkbox"]:checked').length
              if (selected != 0) {
                document.getElementById("recipe-btn").className = "default-btn"
              } else {
-               document.getElementById("reecipe-btn").className = "disabled-btn"
+               document.getElementById("recipe-btn").className = "disabled-btn"
              }
               
           }   
@@ -53,7 +38,7 @@
     <body>
           <div class="row">
             <div class="col-md-2 col-12">
-                <p class="h2 inventory-header">Happy Sushi Inventory</p>
+                <p class="h2 inventory-align">Happy Sushi Inventory</p>
             </div>
             <div class="table-scroll">
                 <table class="sortable list-table inventory" >
@@ -68,7 +53,7 @@
                         <td>5 count</td>
                         <td>11/20/2021</td>
                         <td><div class="purchased-btn">
-                            <input type="checkbox" id="checkbox3"/>
+                            <input type="checkbox" id="checkbox3" onclick="decideBtnColor()"/>
                             <label for="checkbox3"></label></div></td>
                     </tr>
                     <tr>
@@ -76,7 +61,7 @@
                         <td>10 count</td>
                         <td>11/22/2021</td>
                         <td><div class="purchased-btn">
-                            <input type="checkbox" id="checkbox4"/>
+                            <input type="checkbox" id="checkbox4" onclick="decideBtnColor()"/>
                             <label for="checkbox4"></label></div></td>
                     </tr>
                     <tr>
@@ -84,7 +69,7 @@
                         <td>10 piece</td>
                         <td>11/20/2021</td>
                         <td><div class="purchased-btn">
-                            <input type="checkbox" id="checkbox5"/>
+                            <input type="checkbox" id="checkbox5"onclick="decideBtnColor()"/>
                             <label for="checkbox5"></label></div></td>
                     </tr>
                     <tr>
@@ -92,90 +77,92 @@
                       <td>12 lb</td>
                       <td>11/23/2021</td>
                       <td><div class="purchased-btn">
-                          <input type="checkbox" id="checkbox5"/>
-                          <label for="checkbox5"></label></div></td>
+                          <input type="checkbox" id="checkbox6" onclick="decideBtnColor()"/>
+                          <label for="checkbox6"></label></div></td>
                     </tr>
                     <tr>
                         <td>Chicken Thigh</td>
                         <td> 5 lb</td>
                         <td>11/30/2021</td>
                         <td><div class="purchased-btn">
-                            <input type="checkbox" id="checkbox5"/>
-                            <label for="checkbox5"></label></div></td>
+                            <input type="checkbox" id="checkbox7" onclick="decideBtnColor()"/>
+                            <label for="checkbox7"></label></div></td>
                     </tr>
                     <tr>
                         <td>Noodle</td>
                         <td>5 lbs</td>
-                        <td>11/20/2021</td>
+                        <td>05/20/2022</td>
                         <td><div class="purchased-btn">
-                            <input type="checkbox" id="checkbox5"/>
-                            <label for="checkbox5"></label></div></td>
+                            <input type="checkbox" id="checkbox8" onclick="decideBtnColor()"/>
+                            <label for="checkbox8"></label></div></td>
                     </tr>
                     <tr>
                       <td>Lobster</td>
                       <td>12 lb</td>
-                      <td>11/23/2021</td>
+                      <td>04/19/2022</td>
                       <td><div class="purchased-btn">
-                          <input type="checkbox" id="checkbox5"/>
-                          <label for="checkbox5"></label></div></td>
+                          <input type="checkbox" id="checkbox9" onclick="decideBtnColor()"/>
+                          <label for="checkbox9"></label></div></td>
                     </tr>
                     <tr>
                         <td>Lamb</td>
                         <td> 5 lb</td>
-                        <td>11/30/2021</td>
+                        <td>12/20/2021</td>
                         <td><div class="purchased-btn">
-                            <input type="checkbox" id="checkbox5"/>
-                            <label for="checkbox5"></label></div></td>
+                            <input type="checkbox" id="checkbox10" onclick="decideBtnColor()"/>
+                            <label for="checkbox10"></label></div></td>
                     </tr>
                     <tr>
                         <td>Salmon</td>
                         <td>10 piece</td>
-                        <td>11/20/2021</td>
+                        <td>01/20/2022</td>
                         <td><div class="purchased-btn">
-                            <input type="checkbox" id="checkbox5"/>
-                            <label for="checkbox5"></label></div></td>
+                            <input type="checkbox" id="checkbox11"  onclick="decideBtnColor()"/>
+                            <label for="checkbox11"></label></div></td>
                     </tr>
                     <tr>
-                      <td>Pork</td>
-                      <td>12 lb</td>
-                      <td>11/23/2021</td>
+                      <td>Green tea leaves</td>
+                      <td>3 oz</td>
+                      <td>8/6/2022</td>
                       <td><div class="purchased-btn">
-                          <input type="checkbox" id="checkbox5"/>
-                          <label for="checkbox5"></label></div></td>
+                          <input type="checkbox" id="checkbox12"  onclick="decideBtnColor()"/>
+                          <label for="checkbox12"></label></div></td>
                     </tr>
                     <tr>
-                        <td>Chicken Thigh</td>
-                        <td> 5 lb</td>
+                        <td>Milk</td>
+                        <td> 1 carton</td>
                         <td>11/30/2021</td>
                         <td><div class="purchased-btn">
-                            <input type="checkbox" id="checkbox5"/>
-                            <label for="checkbox5"></label></div></td>
+                            <input type="checkbox" id="checkbox13" onclick="decideBtnColor()"/>
+                            <label for="checkbox13"></label></div></td>
                     </tr>
                 </table>
             </div>
         </div>
-        <div>
+        <div class="inventory-align">
           <button type="button" class="disabled-btn" id="recipe-btn">Generate Recipe</button>
         </div>
       
-        <div class="row">
-
-            <button class="navbar-button">
-                <img src="./assets/navbar/camera.svg">
-                <p class="navbar-p">Camera</p>
-            </button>
-            <button class="navbar-button">
-                <img src="./assets/navbar/shopping.svg">
-                <p class="navbar-p">Shopping List</p>
-            </button>
-            <button class="navbar-button">
-                <img src="./assets/navbar/inventory.svg" class="navbar-button-clicked">
-                <p class="navbar-p navbar-p-clicked" >Inventory</p>
-            </button>
-            <button class="navbar-button">
-                <img src="./assets/navbar/settings.svg">
-                <p class="navbar-p" style="margin-top: 2px;">Settings</p>
-            </button>
+        <div class="row navbar ">
+            <div class="ss-navbar">
+                <button class="navbar-button">
+                    <img src="./assets/navbar/camera.svg">
+                    <p class="navbar-p">Camera</p>
+                </button>
+                <button class="navbar-button">
+                    <img src="./assets/navbar/shopping.svg">
+                    <p class="navbar-p">Shopping List</p>
+                </button>
+                <button class="navbar-button">
+                    <img src="./assets/navbar/inventory.svg" class="navbar-button-clicked">
+                    <p class="navbar-p navbar-p-clicked" >Inventory</p>
+                </button>
+                <button class="navbar-button">
+                    <img src="./assets/navbar/settings.svg">
+                    <p class="navbar-p" style="margin-top: 2px;">Settings</p>
+                </button>
+            </div>
+          
          </div>
         
     </body>
