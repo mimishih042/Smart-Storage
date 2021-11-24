@@ -565,4 +565,37 @@ table.recipe-table td {
     border-bottom: 1px solid#DEDEDE;
 }
 
-  
+.navbar-button {
+    align-items: center;
+    text-align: center; 
+    cursor: pointer;
+    float: left;
+    width: 25%;
+    /* put the height and width of your image here */
+    height: 50px;
+    border: none;
+    background:none;
+
+}
+
+.navbar-button-clicked {
+    filter: invert(42%) sepia(93%) saturate(1370%) hue-rotate(335deg) brightness(100%) contrast(100%);
+}
+
+table.inventory {
+    width: 100% !important; 
+}
+
+.table-scroll {
+    height:520px;
+    overflow-y:auto;
+    padding-right: 0px;
+    padding-left: 0px;  
+    margin-bottom: 10px;
+}
+
+
+.inventory-align {
+    text-align: center;
+}
+
