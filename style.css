@@ -618,3 +618,13 @@ table.inventory {
     text-align: center;
 }
 
+.recommend-header {
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+table.recommend-table {
+    width: 100% !important;
+    
+}

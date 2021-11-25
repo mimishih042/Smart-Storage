@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="app-html">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="recommend.js"></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link href="../style.css" rel="stylesheet" />
+        <title>Smart Storage Design System</title>
+    </head>
+    <style>
+        @media only screen and (max-width:500px) {
+        /* For mobile phones: */
+        .menu, .main, .right {
+            width: 100%;
+        }
+        }
+    </style>
+    <body>
+
+        <div class="col-md-6 col-12">
+            <span id="back"><img src="../assets/back_btn.png" class="back-btn"></span>
+            <h2 class="recommend-header">Recommendation</h2>
+        </div>
+
+        <div class="mt-2 ml-2">
+            <p id="selected_list" class="style-guide-p"></p>
+        </div>
+            <div class=" mt-3 table-scroll">
+
+                <!-- <div class="col-md-10 col-12"> -->
+                    <table class="recipe-table recommend-table">
+                        <tr>
+                            <td><img src="../assets/Rectangle-14.png" class="recipe-img"></td>
+                            <td>Meatball Spaghetti<br>
+                                Ingredients: Tomatoes (expires in 3 days), meatballs, spaghetti</td>
+                            <td>></td>
+                        </tr>
+                        <tr>
+                            <td><img src="../assets/Rectangle-15.png" class="recipe-img"></td>
+                            <td>Creamed Spinach<br>
+                                Ingredients: Spinach (expires in 3 days), butter, milk, sour cream</td>
+                            <td>></td>
+                        </tr>
+                        <tr>
+                            <td><img src="../assets/Rectangle-16.png" class="recipe-img"></td>
+                            <td>Banana Ice Cream<br>
+                                Ingredients: Banana (expires in 4 days), milk, ice, vanilla ice cream</td>
+                            <td>></td>
+                        </tr>
+                    </table>
+                <!-- </div> -->
+            </div>
+        </div>
+      
+        <div class="row navbar ">
+            <div class="ss-navbar ss-app-navbar">
+                <button class="navbar-button">
+                    <img src="../assets/navbar/camera.svg">
+                    <p class="navbar-p mt-1">Camera</p>
+                </button>
+                <button class="navbar-button">
+                    <img src="../assets/navbar/shopping.svg">
+                    <p class="navbar-p mt-1">Shopping List</p>
+                </button>
+                <button class="navbar-button">
+                    <img src="../assets/navbar/inventory.svg" class="navbar-button-clicked">
+                    <p class="navbar-p navbar-p-clicked mt-1" >Inventory</p>
+                </button>
+                <button class="navbar-button">
+                    <img src="../assets/navbar/settings.svg">
+                    <p class="navbar-p">Settings</p>
+                </button>
+            </div>
+          
+         </div>
+        
+    </body>
+
+</html>

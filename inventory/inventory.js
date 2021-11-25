@@ -1,21 +1,22 @@
 var list = [
-    { name: 'Red Apple', qty:'10 lbs', expiration: '12/06/2021', id: 'checkbox1' },
-    { name: 'Banana', qty:'3 lbs', expiration: '12/15/2021', id: 'checkbox2' },
-    { name: 'Salmon', qty:'3 lbs',expiration: '12/08/2021', id: 'checkbox3' },
-    { name: 'Pork', qty:'12 lbs', expiration: '12/06/2021', id: 'checkbox4' },
-    { name: 'Chicken Thigh', qty:'20 lbs',expiration: '12/24/2021', id: 'checkbox5' },
-    { name: 'Noodle', qty:'5 lbs', expiration: '12/15/2021', id: 'checkbox6' },
-    { name: 'Lobster',qty:'10 lbs', expiration: '12/16/2021', id: 'checkbox7' },
-    { name: 'Lamb', qty: '8 lbs', expiration: '01/15/2022', id: 'checkbox8' },
-    { name: 'Green Tea Leaves', qty:'12 oz', expiration: '08/25/2022', id: 'checkbox9' },
-    { name: 'Lemon', qty:'10' ,expiration: '01/14/2022', id: 'checkbox10' },
-    { name: 'Milk', qty:'2', expiration: '12/11/2021', id: 'checkbox11' },
+    { name: 'Red Apple', qty:'10 lbs', expiration: '12/06/2021', id: 0},
+    { name: 'Banana', qty:'3 lbs', expiration: '12/15/2021', id: 1 },
+    { name: 'Salmon', qty:'3 lbs',expiration: '12/08/2021', id: 2 },
+    { name: 'Pork', qty:'12 lbs', expiration: '12/06/2021', id: 3 },
+    { name: 'Chicken Thigh', qty:'20 lbs',expiration: '12/24/2021', id: 4 },
+    { name: 'Noodle', qty:'5 lbs', expiration: '12/15/2021', id: 5 },
+    { name: 'Lobster',qty:'10 lbs', expiration: '12/16/2021', id: 6 },
+    { name: 'Lamb', qty: '8 lbs', expiration: '01/15/2022', id: 7 },
+    { name: 'Green Tea Leaves', qty:'12 oz', expiration: '08/25/2022', id: 8 },
+    { name: 'Lemon', qty:'10' ,expiration: '01/14/2022', id: 9 },
+    { name: 'Milk', qty:'2', expiration: '12/11/2021', id: 10 },
 
 
 ];
 
 function decideBtnColor() {
     var selected =  document.querySelectorAll('input[type="checkbox"]:checked').length
+
      if (selected != 0) {
        document.getElementById("recipe-btn").className = "default-btn"
      } else {
@@ -30,11 +31,20 @@ function addNewItem(list, item) {
 
 function addBtnListenr() {
     const btn = document.getElementById('recipe-btn')
+
     btn.addEventListener('click', (e) => {
         if (e.target.className === 'disabled-btn') {
             return
         } else {
-            window.location.replace('../recommend/recommend.html')
+            var checked =  document.querySelectorAll('input[type="checkbox"]:checked')
+            var items = []
+            for (var j = 0; j < checked.length; j++) {
+               var target = parseInt(checked[j].id)
+               var ele = list.find(({id}) => id === target)
+                items.push(ele)
+            }
+            localStorage.setItem("selected", JSON.stringify(items))
+            window.location.href = '../recommend/recommend.html'
 
         }
     });
@@ -73,10 +83,11 @@ function renderList(data) {
     }
 }
 
+//TODO: FIX recipe btn not highlighted when return from recommendation
+
 function main() {
     addBtnListenr()
-    const sorted = sortByExpiration(list)
-    renderList(sorted)
+    sortByExpiration(list)
+    renderList(list)
 }
-
 document.addEventListener('DOMContentLoaded', main);
