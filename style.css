@@ -283,6 +283,20 @@ thead {
     color: #804F1E;
 }
 
+.change-date-form{
+    display: none;
+}
+
+.date-in-list{
+    display: block;
+}
+
+.date-input{
+    width: 100px;
+    text-align: center;
+    position: relative;
+}
+
 .input-counter {
     max-width: 150px;
     min-width: 150px;
@@ -332,7 +346,9 @@ thead {
 .purchased-btn {
     position: relative;
 }
-
+.selected-food-list-btn {
+    position: relative;
+}
 .purchased-btn label {
     background-color: #fff;
     border: 1px solid #FF5E00;
@@ -344,7 +360,32 @@ thead {
     width: 28px;
 }
 
+.selected-food-list-btn label {
+    background-color: #fff;
+    border: 1px solid #FF5E00;
+    border-radius: 50%;
+    height: 28px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 28px;
+}
+
 .purchased-btn label:before {
+    border: 2px solid #DEDEDE;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    left: 7px;
+    opacity: 1;
+    position: absolute;
+    top: 8px;
+    transform: rotate(-45deg);
+    width: 12px;
+}
+
+.selected-food-list-btn label:before {
     border: 2px solid #DEDEDE;
     border-top: none;
     border-right: none;
@@ -372,7 +413,25 @@ thead {
     width: 12px;
 }
 
+.selected-food-list-btn label:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    left: 7px;
+    opacity: 0;
+    position: absolute;
+    top: 8px;
+    transform: rotate(-45deg);
+    width: 12px;
+}
+
 .purchased-btn input[type="checkbox"] {
+    visibility: hidden;
+}
+
+.selected-food-list-btn input[type="checkbox"] {
     visibility: hidden;
 }
 
@@ -381,10 +440,18 @@ thead {
     border-color: #FF5E00;
 }
 
+.selected-food-list-btn input[type="checkbox"]:checked + label {
+    background-color: #FF5E00;
+    border-color: #FF5E00;
+}
+
 .purchased-btn input[type="checkbox"]:checked + label:after {
     opacity: 1;
 }
 
+.selected-food-list-btn input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
 
 
 .year-table{
@@ -597,11 +664,24 @@ table.recipe-table td {
 
 }
 
+.pick-date-button {
+    /* put the height and width of your image here */
+    width:5px;
+    height: 5px;
+    border: none;
+    background:none;
+    align-items: center;
+}
+
 .navbar-button-clicked {
     filter: invert(42%) sepia(93%) saturate(1370%) hue-rotate(335deg) brightness(100%) contrast(100%);
 }
 
 table.inventory {
+    width: 100% !important; 
+}
+
+table.food-list {
     width: 100% !important; 
 }
 
@@ -615,6 +695,10 @@ table.inventory {
 
 
 .inventory-align {
+    text-align: center;
+}
+
+.food-list-align {
     text-align: center;
 }
 
