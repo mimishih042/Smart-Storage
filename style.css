@@ -686,7 +686,7 @@ table.food-list {
 }
 
 .table-scroll {
-    height:530px;
+    height:500px;
     overflow-y:auto;
     padding-right: 0px;
     padding-left: 0px;  
@@ -698,7 +698,20 @@ table.food-list {
     text-align: center;
 }
 
+
+.recommend-header {
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+table.recommend-table {
+    width: 100% !important;
+    
+}
+
 .food-list-align {
     text-align: center;
 }
+
 
