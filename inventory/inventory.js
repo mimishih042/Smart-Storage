@@ -30,8 +30,13 @@ function addNewItem(list, item) {
 
 function addBtnListenr() {
     const btn = document.getElementById('recipe-btn')
-    btn.addEventListener('click', () => {
-        window.location.replace('../recommend/recommend.html')
+    btn.addEventListener('click', (e) => {
+        if (e.target.className === 'disabled-btn') {
+            return
+        } else {
+            window.location.replace('../recommend/recommend.html')
+
+        }
     });
 }
 
