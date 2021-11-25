@@ -13,31 +13,22 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
         <link href="./style.css" rel="stylesheet" />
         <script>
-          count = 0;
+          count1 = 0;
           function adjustCount() {
             var selected =  document.getElementById('adjust1')
-            
             var div = document.createElement("div");
             div.className = "input-counter";
-            var span1 = document.createElement("span");
-            span1.className = "minus-btn";
-            span1.innerHTML = "-";
-            var span2 = document.createElement("span");
-            span2.className = "plus-btn";
-            span2.innerHTML = "+";
             var input = document.createElement("input");
             input.type = "number";
             input.value = 0;
             input.step = 1;
             input.id = "newCount";
-            div.appendChild(span1);
             div.appendChild(input);
-            div.appendChild(span2);
-            if(count == 0) {
+            if(count1 == 0) {
                 selected.innerHTML = '';
                 selected.appendChild(div)
             }
-            count++
+            count1++
           }
           
           count2 = 0;
@@ -57,24 +48,27 @@
           } 
 
           function addNewCount() {
-            var selected =  document.getElementById('adjust1')
+            var selected1 =  document.getElementById('adjust1')
             if(document.getElementById("newCount") != null) {
                 var count = document.getElementById("newCount").value;
-                selected.innerHTML = count;
+                selected1.innerHTML = count;
             }
-            var selected =  document.getElementById('adjust2');
+            var selected2 =  document.getElementById('adjust2');
             if(document.getElementById("newName") != null) {
                 var name = document.getElementById("newName").value;
-                selected.innerHTML = name;
+                selected2.innerHTML = name;
             }
-            
+            count1 = 0;
+            count2 = 0;
           }
 
           function cancel() {
-            var selected =  document.getElementById('adjust1')
-            selected.innerHTML = 100;
-            var selected =  document.getElementById('adjust2')
-            selected.innerHTML = "Egg";
+            var selected1 =  document.getElementById('adjust1')
+            selected1.innerHTML = 100;
+            var selected2 =  document.getElementById('adjust2')
+            selected2.innerHTML = "Egg";
+            count1 = 0;
+            count2 = 0;
           }
 
       
@@ -118,9 +112,9 @@
                         <td onclick="adjustCount()" id="adjust1">100</td>
                     </tr>
                     <tr>
-                        <td>Salt</td>
+                        <td id="adjust3">Salt</td>
                         <td>5lbs</td>
-                        <td>1lbs</td>
+                        <td id="adjust4">1lbs</td>
                     </tr>
                     <tr>
                         <td>Pepper</td>
@@ -145,9 +139,6 @@
                 </table>
             </div>
         </div>
-      
-        <div class="row navbar ">
-            <div class="ss-navbar ss-app-navbar">
                 <div>
                     <button onclick="addNewCount()" class="navbar-button2">
                         <p class="navbar-p mt-1">Ready to add</p>
@@ -158,6 +149,23 @@
                         <p class="navbar-p navbar-p-clicked mt-1" >Cancel</p>
                     </button>
                 </div>
+        
+        <div class="ss-navbar ss-app-navbar">
+            <div class="navbar-elem">
+                <img src="./assets/navbar/camera.svg" class="navbar-elem-clicked">
+                <p class="navbar-p navbar-p-clicked">Camera</p>
+            </div>
+            <div class="navbar-elem">
+                <img src="./assets/navbar/shopping.svg">
+                <p class="navbar-p">Shopping List</p>
+            </div>
+            <div class="navbar-elem">
+                <img src="./assets/navbar/inventory.svg">
+                <p class="navbar-p" >Inventory</p>
+            </div>
+            <div class="navbar-elem">
+                <img src="./assets/navbar/settings.svg">
+                <p class="navbar-p">Settings</p>
             </div>
         </div>
         
