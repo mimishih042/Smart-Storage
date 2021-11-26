@@ -1,7 +1,8 @@
 var list = [
-    { name: 'Red Apple', qty:'10 lbs', expiration: '12/06/2021', id: 0},
-    { name: 'Banana', qty:'3 lbs', expiration: '12/15/2021', id: 1 },
-    { name: 'Salmon', qty:'3 lbs',expiration: '12/08/2021', id: 2 },
+    // todo: change expiration date
+    { name: 'Red Apple', qty:'10 lbs', expiration: '11/28/2021', id: 0},
+    { name: 'Banana', qty:'3 lbs', expiration: '11/28/2021', id: 1 },
+    { name: 'Salmon', qty:'3 lbs',expiration: '11/28/2021', id: 2 },
     { name: 'Pork', qty:'12 lbs', expiration: '12/06/2021', id: 3 },
     { name: 'Chicken Thigh', qty:'20 lbs',expiration: '12/24/2021', id: 4 },
     { name: 'Noodle', qty:'5 lbs', expiration: '12/15/2021', id: 5 },
@@ -16,7 +17,6 @@ var list = [
 
 function decideBtnColor() {
     var selected =  document.querySelectorAll('input[type="checkbox"]:checked').length
-
      if (selected != 0) {
        document.getElementById("recipe-btn").className = "default-btn"
      } else {
@@ -31,7 +31,6 @@ function addNewItem(list, item) {
 
 function addBtnListenr() {
     const btn = document.getElementById('recipe-btn')
-
     btn.addEventListener('click', (e) => {
         if (e.target.className === 'disabled-btn') {
             return
@@ -83,11 +82,10 @@ function renderList(data) {
     }
 }
 
-//TODO: FIX recipe btn not highlighted when return from recommendation
-
 function main() {
     addBtnListenr()
     sortByExpiration(list)
     renderList(list)
 }
 document.addEventListener('DOMContentLoaded', main);
+window.addEventListener("load", decideBtnColor);
