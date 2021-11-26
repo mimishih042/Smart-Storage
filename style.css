@@ -717,6 +717,8 @@ table.recommend-table {
     text-align: center;
 }
 
-.tablinks {
-    display: inline-block;
+.shopping-tab{
+    width:100% !important;
+    display:flex;
+    justify-content: space-around;
 }
