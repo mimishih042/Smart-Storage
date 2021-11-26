@@ -616,17 +616,20 @@ table.list-table .input-counter input {
     border: none;
     border-bottom: 1px solid #DEDEDE;
     width: 25%;
+
 }
   
   /* Style the buttons that are used to open the tab content */
 .tab button {
     background-color: inherit;
-    float: left;
+    /* float: left; */
     border: none;
     outline: none;
     padding: 14px 16px;
     transition: 0.3s;
     color: #6D3805;
+    display: inline-block;
+
 }
   
   /* Create an active/current tablink class */
@@ -714,4 +717,6 @@ table.recommend-table {
     text-align: center;
 }
 
-
+.tablinks {
+    display: inline-block;
+}
