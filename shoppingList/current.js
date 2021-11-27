@@ -24,6 +24,10 @@ function decideBtnColor() {
         items.push(ele)
         list.splice(list.indexOf(ele), 1)
     }
+    var curPurchased = JSON.parse(localStorage.getItem("purchased"))
+    if (curPurchased) {
+        items = curPurchased.concat(items)
+    }
     localStorage.setItem("purchased", JSON.stringify(items));
 }
 
