@@ -11,20 +11,18 @@ var list = [
     // { name: 'Green Tea Leaves', qty:'12 oz', expiration: '08/25/2022', id: 8 },
     // { name: 'Lemon', qty:'10' ,expiration: '01/14/2022', id: 9 },
     // { name: 'Milk', qty:'2', expiration: '12/11/2021', id: 10 },
-
-
 ];
+
+var items = [];
 
 function decideBtnColor() {
     var checked =  document.querySelectorAll('input[type="checkbox"]:checked')
-    var items = []
     for (var j = 0; j < checked.length; j++) {
        var target = parseInt(checked[j].id)
        var ele = list.find(({id}) => id === target)
         items.push(ele)
     }
-    console.log(items)
-    localStorage.setItem("selected", JSON.stringify(items))    
+    localStorage.setItem("selected", JSON.stringify(items));
 }
 function firstItemMinus() {
     var value = document.getElementById("item0").value
@@ -59,8 +57,18 @@ function thirdItemPlus() {
 }
 
 
+function clearTable() {
+    var table = document.getElementById('current-shopping-list')
+    var rows = table.rows;
+    var i = rows.length;
+    while (--i) {
+      rows[i].parentNode.removeChild(rows[i]);
+    }
+  }
+
 function renderList(data) {
     var table = document.getElementById('current-shopping-list')
+    clearTable()
     var indexes = ["first", "second", 'third']
     for (var i = 0; i < data.length; i++){
         var ele = data[i];
@@ -78,13 +86,19 @@ function renderList(data) {
                         </div>
                     </div>
                 </td>
-                <td><div class="selected-food-list-btn">
-                    <input type="checkbox" id=${ele.id} onclick="decideBtnColor()"}/>
-                    <label for=${ele.id}></label></div></td>
+                <td><div class="purchased-container">
+                        <div class="purchased-btn">
+                         <input type="checkbox" id="${ele.id}" />
+                            <label for="${ele.id}"></label>
+                         </div>
+                    </div>
+                </td>
             </tr>
         `
     }
 }
+
+
 
 document.addEventListener('mouseup', function (e) {
     // var form1 = document.getElementById('changeDateForm1')
@@ -133,9 +147,19 @@ function setTabLink() {
     })
 }
 
+function addToPushased() {
+    const addPurchased = document.getElementById("Add-to-Purchased");
+    addPurchased.addEventListener('click',() => {
+        decideBtnColor()
+        let uncheckedItem = list.filter(x => !items.includes(x));
+        renderList(uncheckedItem);
+    }) 
+}
+
 function main() {
     setTabLink();
     renderList(list);
+    addToPushased();
 
 }
 document.addEventListener('DOMContentLoaded', main);
