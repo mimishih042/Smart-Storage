@@ -15,7 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
-    <link href="./style.css" rel="stylesheet" />
+    <link href="../style.css" rel="stylesheet" />
     
     <title>Smart Storage Design System</title>
 </head>
@@ -32,10 +32,15 @@
 </style>
 
 <body>
+    <div class="col-md-6 col-12">
+        <h2 class="food-list-align">Take a Photo</h2>
+    </div>
     <div>
-        <video id="video" width="300" height="800" autoplay></video>
+        <video id="video" width="300" height="300" autoplay></video>
         <canvas id="canvas" width="200" height="100"></canvas>
-        <button id="snap">Snap Photo</button>
+        <button id="snap" type="button" class="disabled-btn" id="generate-food-list-btn">
+            Generate List
+        </button>
     </div>
     <script>
         // Grab elements, create settings, etc.
@@ -60,7 +65,7 @@
             });
         }
 
-
+        
     </script>
 </body>
 
