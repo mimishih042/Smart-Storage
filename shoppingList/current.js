@@ -22,7 +22,7 @@ function decideBtnColor() {
        var ele = list.find(({id}) => id === target)
         items.push(ele)
     }
-    localStorage.setItem("selected", JSON.stringify(items));
+    localStorage.setItem("purchased", JSON.stringify(items));
 }
 function firstItemMinus() {
     var value = document.getElementById("item0").value
@@ -64,7 +64,7 @@ function clearTable() {
     while (--i) {
       rows[i].parentNode.removeChild(rows[i]);
     }
-  }
+}
 
 function renderList(data) {
     var table = document.getElementById('current-shopping-list')
