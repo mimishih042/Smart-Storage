@@ -16,7 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
     <link href="../style.css" rel="stylesheet" />
-    
+
     <title>Smart Storage Design System</title>
 </head>
 <style>
@@ -33,39 +33,25 @@
 
 <body>
     <div class="col-md-6 col-12">
-        <h2 class="food-list-align">Take a Photo</h2>
+        <h2 class="food-list-align">Check your Photo</h2>
     </div>
-    <div>
-        <video id="video" width="300" height="300" autoplay></video>
-        <canvas id="canvas" width="200" height="100"></canvas>
-        <button id="snap" type="button" class="disabled-btn" id="generate-food-list-btn">
-            Generate List
+    <div class="food-list-align">
+        <img src="../assets/photo-1620217310705-ea0af48e8158.jfif" class="food-img">
+        <button id="retakeBtn" type="button" class="default-btn" onclick="goback()" style="margin: 10px;">
+            Retake
+        </button>
+        <button id="generateBtn" type="button" class="default-btn" onclick="generateList()">
+            Ready to generate
         </button>
     </div>
     <script>
-        // Grab elements, create settings, etc.
-        // Elements for taking the snapshot
-        var canvas = document.getElementById('canvas');
-        var ctx = canvas.getContext('2d');
-        var video = document.getElementById('video');
-
-        // Trigger photo take
-        document.getElementById("snap").addEventListener("click", function () {
-            ctx.drawImage(video, 0, 0, 200, 100);
-        });
-
-
-        //Get access to the camera!
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            // Not adding `{ audio: true }` since we only want video now
-            navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
-                //video.src = window.URL.createObjectURL(stream);
-                video.srcObject = stream;
-                video.play();
-            });
+        function generateList() {
+            location.replace("./pictureFood.html")
         }
 
-        
+        function goback() {
+            location.replace("./takeApictureForFood.html")
+        }
     </script>
 </body>
 
