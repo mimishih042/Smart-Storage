@@ -97,6 +97,10 @@
             }
         }
 
+        function back() {
+            location.replace("./pictureForFood.html")
+        }
+
         document.addEventListener('mouseup', function (e) {
             var form1 = document.getElementById('changeDateForm1')
             var form2 = document.getElementById('changeDateForm2')
@@ -104,22 +108,22 @@
             var selected1 = document.getElementById("date1")
             var selected2 = document.getElementById("date2")
             var selected3 = document.getElementById("date3")
-            if (!form1.contains(e.target)&&selected1.style.display === 'none'
-            &&form1.style.display === 'block') {
+            if (!form1.contains(e.target) && selected1.style.display === 'none'
+                && form1.style.display === 'block') {
                 var date1 = form1.newDateInput1.value
                 selected1.innerHTML = date1
                 selected1.style.display = 'block'
                 form1.style.display = 'none'
             }
-            if (!form2.contains(e.target)&&selected2.style.display === 'none'
-            &&form2.style.display === 'block') {
+            if (!form2.contains(e.target) && selected2.style.display === 'none'
+                && form2.style.display === 'block') {
                 var date2 = form2.newDateInput2.value
                 selected2.innerHTML = date2
                 selected2.style.display = 'block'
                 form2.style.display = 'none'
             }
-            if (!form3.contains(e.target)&&selected3.style.display === 'none'
-            &&form3.style.display === 'block') {
+            if (!form3.contains(e.target) && selected3.style.display === 'none'
+                && form3.style.display === 'block') {
                 var date3 = form3.newDateInput3.value
                 selected3.innerHTML = date3
                 selected3.style.display = 'block'
@@ -145,18 +149,22 @@
 <body>
     <div class="row">
         <div class="col-md-6 col-12">
+            <span id="back" onclick="back()"><img src="../assets/back_btn.png" class="back-btn"></span>
             <h2 class="food-list-align">Your food list</h2>
         </div>
         <div class="table-scroll">
             <table class="sortable list-table food-list">
                 <tr>
-                    <th style="width: 15%;">Item</th>
-                    <th style="width: 50%;">Qty</th>
-                    <th style="width: 25%;">Expiration Date</th>
+                    <th style="width: 20%;">Item</th>
+                    <th style="width: 40%;">Qty</th>
+                    <th style="width: 30%;">Expiration Date</th>
                     <th style="width: 10%;">Select</th>
                 </tr>
                 <tr>
-                    <td>Red Apple (lbs)</td>
+                    <td>
+                        Mandarin
+                        <br>(lb)
+                    </td>
                     <td>
                         <div class="mt-3">
                             <div class="input-counter">
@@ -168,7 +176,7 @@
                     </td>
 
                     <td onclick="pickDate1()">
-                        <p class="date-in-list" id="date1">11/20/2021</p>
+                        <p class="date-in-list" id="date1">12/20/2021</p>
                         <form class="change-date-form" id="changeDateForm1">
                             <input type="text" class="date-input" id="newDateInput1" name="newDateInput1"
                                 value="11/20/2021"><br>
@@ -182,7 +190,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Banana (lbs)</td>
+                    <td>
+                        Cherry
+                        <br>(lb)
+                    </td>
                     <td>
                         <div class="mt-3">
                             <div class="input-counter">
@@ -193,7 +204,7 @@
                         </div>
                     </td>
                     <td onclick="pickDate2()">
-                        <p id="date2" class="date-in-list">11/22/2021</p>
+                        <p id="date2" class="date-in-list">12/22/2021</p>
                         <form class="change-date-form" id="changeDateForm2">
                             <input type="text" class="date-input" id="newDateInput2" name="newDateInput2"
                                 value="11/22/2021"><br>
@@ -207,7 +218,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Milk(carton)</td>
+                    <td>Pomegra
+                        <br>-nate
+                        <br>(lb)
+                    </td>
                     <td>
                         <div class="mt-3">
                             <div class="input-counter">
@@ -218,7 +232,7 @@
                         </div>
                     </td>
                     <td onclick="pickDate3()">
-                        <p id="date3" class="date-in-list">11/30/2021</p>
+                        <p id="date3" class="date-in-list">01/30/2022</p>
                         <form class="change-date-form" id="changeDateForm3">
                             <input type="text" class="date-input" id="newDateInput3" name="newDateInput3"
                                 value="11/30/2021"><br>
