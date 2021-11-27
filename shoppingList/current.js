@@ -27,35 +27,35 @@ function decideBtnColor() {
     localStorage.setItem("selected", JSON.stringify(items))    
 }
 function firstItemMinus() {
+    var value = document.getElementById("item0").value
+    if (value > 0) {
+        document.getElementById("item0").value = value - 1
+    }
+}
+function secondItemMinus() {
     var value = document.getElementById("item1").value
     if (value > 0) {
         document.getElementById("item1").value = value - 1
     }
 }
-function secondItemMinus() {
+function thirdItemMinus() {
     var value = document.getElementById("item2").value
     if (value > 0) {
         document.getElementById("item2").value = value - 1
     }
 }
-function thirdItemMinus() {
-    var value = document.getElementById("item3").value
-    if (value > 0) {
-        document.getElementById("item3").value = value - 1
-    }
-}
 
 function firstItemPlus() {
+    var value = parseInt(document.getElementById("item0").value) + 1
+    document.getElementById("item0").value = value
+}
+function secondItemPlus() {
     var value = parseInt(document.getElementById("item1").value) + 1
     document.getElementById("item1").value = value
 }
-function secondItemPlus() {
+function thirdItemPlus() {
     var value = parseInt(document.getElementById("item2").value) + 1
     document.getElementById("item2").value = value
-}
-function thirdItemPlus() {
-    var value = parseInt(document.getElementById("item3").value) + 1
-    document.getElementById("item3").value = value
 }
 
 
@@ -73,7 +73,7 @@ function renderList(data) {
                     <div class="mt-3">
                         <div class="input-counter">
                         <span class="minus-btn" onclick="${index}ItemMinus()">-</span>
-                        <input id="item${index}" type="text" value=${ele.qty}>
+                        <input id="item${ele.id}" type="text" value=${ele.qty}>
                         <span class="plus-btn" onclick="${index}ItemPlus()">+</span>
                         </div>
                     </div>
@@ -83,7 +83,6 @@ function renderList(data) {
                     <label for=${ele.id}></label></div></td>
             </tr>
         `
-        
     }
 }
 
