@@ -44,8 +44,8 @@
                 <p class="style-guide-p">Filter Shopping List</p>
                 <button type="button" onclick="monthDropdown()" class="drop-btn" id="month-btn">Nov</button>
                 <div class="month-table-container mt-3">
-                    <div id="month-dropdown-list" class="month-dropdown">
-                    <table  class="month-table">
+                    <div id="month-dropdown-list" class="month-table">
+                    <table class="month-table">
                         <tr>
                             <td tabindex="-1" disabled>JAN</td>
                             <td tabindex="-1" disabled>FEB</td>
@@ -62,7 +62,7 @@
                             <td tabindex="-1" disabled>SEP</td>
                         </tr>
                         <tr>
-                            <td tabindex="-1" disabled>OCT</td>
+                            <td tabindex="-1" onclick=showOctData()>OCT</td>
                             <td tabindex="-1" autofocus>NOV</td>
                             <td tabindex="-1" disabled>DEC</td>
                         </tr>
@@ -79,8 +79,8 @@
                     </div>
             </div>
         </div>
-        <div class="table-scroll">
-            <table class="sortable list-table food-list" id = "history-shopping-list">
+        <div class="table-scroll month-table">
+            <table class="sortable list-table food-list" id = "nov-history-shopping-list">
                 <tr>
                     <th colspan="2">Created on: Nov/29/2021 </th>
                 </tr>
@@ -89,10 +89,65 @@
                     <th style="width: 40%;">Qty</th>
                 </tr>
             </table>
+            <div id = "oct-history-shopping-list">
+                <table class="sortable list-table food-list">
+                    <tr>
+                        <th colspan="2">Created on: Oct/25/2021 </th>
+                    </tr>
+                    <tr>
+                        <th style="width: 60%;">Item</th>
+                        <th style="width: 40%;">Qty</th>
+                    </tr>
+                    <tr>
+                        <td>apple</td>
+                        <td>10 lbs</td>
+                    </tr>
+                    <tr>
+                        <td>corn oil</td>
+                        <td>5 lbs</td>
+                    </tr>
+                    <tr>
+                        <td>peach</td>
+                        <td>6 lbs</td>
+                    </tr>
+                    <tr>
+                        <td>bacon</td>
+                        <td>10 lbs</td>
+                    </tr>
+                </table>
+                <table class="sortable list-table food-list" style="margin-top:15px">
+                    <tr>
+                        <th colspan="2">Created on: Oct/29/2021 </th>
+                    </tr>
+                    <tr>
+                        <th style="width: 60%;">Item</th>
+                        <th style="width: 40%;">Qty</th>
+                    </tr>
+                    <tr>
+                        <td>orange</td>
+                        <td>10 lbs</td>
+                    </tr>
+                    <tr>
+                        <td>red pepper</td>
+                        <td>5 lbs</td>
+                    </tr>
+                    <tr>
+                        <td>green pepper</td>
+                        <td>6 lbs</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="col-md-10 col-12">
+                <div class="pagination">
+                    <page href="#">&laquo;</page>
+                    <page href="#">1</page>
+                    <page class="active" href="#">2</page>
+                    <page href="#">&raquo;</page>
+                </div>
+            </div>
         </div>
     </div>
-
-
     <div class="row navbar ">
         <div class="ss-navbar ss-app-navbar">
             <button class="navbar-button">

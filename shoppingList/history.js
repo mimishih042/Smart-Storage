@@ -1,7 +1,7 @@
 var purchased = JSON.parse(localStorage.getItem("purchased"))
 
-function clearTable() {
-    var table = document.getElementById('history-shopping-list')
+function clearNovTable() {
+    var table = document.getElementById('nov-history-shopping-list')
     var rows = table.rows;
     var i = rows.length-1;
     while (i>1) {
@@ -10,9 +10,10 @@ function clearTable() {
     }
 }
 
-function renderList(data) {
-    var table = document.getElementById('history-shopping-list')
-    clearTable()
+function renderNovList(data) {
+    var table = document.getElementById('nov-history-shopping-list')
+    table.style.display = "";
+    clearNovTable()
     var indexes = ["first", "second", 'third']
     for (var i = 0; i < data.length; i++){
         var ele = data[i];
@@ -25,6 +26,9 @@ function renderList(data) {
             </tr>
         `
     }
+    var x = document.getElementById("oct-history-shopping-list");
+    x.style.display = "none";
+    
 }
 
 function setTabLink() {
@@ -43,6 +47,13 @@ function setTabLink() {
         cur.className = "tablinks ";
     
     })
+}
+
+function showOctData() {
+  var x = document.getElementById("oct-history-shopping-list");
+  x.style.display = "";
+  var y = document.getElementById("nov-history-shopping-list");
+  y.style.display = "none";
 }
 
 function yearDropdown() {
@@ -64,7 +75,7 @@ window.onclick = function(event) {
           openDropdown.classList.remove('show');
         }
       }
-        dropdowns = document.getElementsByClassName("month-table month-dropdown");
+      dropdowns = document.getElementsByClassName("month-table month-dropdown");
       for (i = 0; i < dropdowns.length; i++) {
         var openDropdown = dropdowns[i];
         if (openDropdown.classList.contains('show')) {
@@ -77,8 +88,7 @@ window.onclick = function(event) {
 
 function main() {
     setTabLink();
-    console.log(purchased)
-    renderList(purchased);
+    renderNovList(purchased);
 }
 
 document.addEventListener('DOMContentLoaded', main);
