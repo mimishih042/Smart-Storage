@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="app-html">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -35,10 +35,10 @@
     </style>
     <body>
           <div class="row">
-            <div class="col-md-2 col-12">
-                <p class="h2 inventory-align">Generate Food List Based on Recipe</p>
+            <div class="col-12">
+                <h2 class="inventory-align" style="font-size: 1.7rem;">Generated Shopping List</h2>
             </div>
-            <div class="table-scroll">
+            <div class="table-scroll" style="height: 60vh;">
                 <table class="sortable list-table inventory" >
                     <tr>
                         <th style="width: 40%;">Food</th>
@@ -51,14 +51,14 @@
                         <td>100</td>
                     </tr>
                     <tr>
-                        <td>Salt</td>
-                        <td>5lbs</td>
-                        <td>1lbs</td>
+                        <td>Salt (lbs)</td>
+                        <td>5</td>
+                        <td>1</td>
                     </tr>
                     <tr>
-                        <td>Pepper</td>
-                        <td>5lbs</td>
-                        <td>1lbs</td>
+                        <td>Pepper (lbs)</td>
+                        <td>5</td>
+                        <td>1</td>
                     </tr>
                     <tr>
                       <td>Tomato</td>
@@ -66,9 +66,9 @@
                       <td>50</td>
                     </tr>
                     <tr>
-                        <td>Spinach</td>
-                        <td>30lbs</td>
-                        <td>20lbs</td>
+                        <td>Spinach (lbs)</td>
+                        <td>30</td>
+                        <td>20</td>
                     </tr>
                     <tr>
                         <td>Sausage</td>
@@ -79,16 +79,10 @@
             </div>
         </div>
 
-                <div>
-                    <button class="navbar-button2">
-                        <p class="navbar-p mt-1">Ready to add</p>
-                    </button>
-                </div>
-                <div>
-                    <button class="navbar-button2">
-                        <p class="navbar-p navbar-p-clicked mt-1" >Cancel</p>
-                    </button>
-                </div>
+        <div>
+            <button type="button" class="default-btn" style="width: 100%;">Ready to Add</button>
+            <button type="button" class="default-btn mt-3" style="background-color: #FFF7EF; color: #804F1E; width: 100%;">Cancel</button>
+        </div>
             
         
 
