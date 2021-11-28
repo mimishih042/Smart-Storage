@@ -43,7 +43,7 @@ function addBtnListenr() {
                 items.push(ele)
             }
             localStorage.setItem("selected", JSON.stringify(items))
-            window.location.href = '../recommend/recommend.html'
+            window.location.href = './recommend/recommend.html'
 
         }
     });
