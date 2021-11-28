@@ -33,18 +33,16 @@
 
 <body>
     <div class="col-md-6 col-12">
-        <h2 class="food-list-align">Take a Photo For Your Recipe</h2>
+        <h2 class="food-list-align">Check your Photo</h2>
     </div>
-    <div class="videoContainer">
-        <video id="video" class="video-insert" width="300" height="300" autoplay></video>
-        <h6 class="food-list-align"> 
-            Make sure all the food recipes can be seen from the photo
-        </h6>
-        <a href="pictureForRecipe.html">
-            <button type="button" class="default-btn take-photo-btn">
-                Take A Photo
-            </button>
-        </a>
+    <div class="food-list-align">
+        <img src="../assets/recipe.jpeg" class="food-img">
+        <button id="retakeBtn" type="button" class="default-btn" onclick="goback()" style="margin: 10px;">
+            Retake
+        </button>
+        <button id="generateBtn" type="button" class="default-btn" onclick="generateList()">
+            Ready to generate
+        </button>
     </div>
     <div class="row navbar ">
         <div class="ss-navbar ss-app-navbar">
@@ -70,18 +68,13 @@
 
     </div>
     <script>
-        var video = document.getElementById('video');
-
-        //Get access to the camera!
-        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-            // Not adding `{ audio: true }` since we only want video now
-            navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
-                //video.src = window.URL.createObjectURL(stream);
-                video.srcObject = stream;
-                video.play();
-            });
+        function generateList() {
+            location.replace("./pictureFood.html")
         }
 
+        function goback() {
+            location.replace("./takeARecipePicture.html")
+        }
     </script>
 </body>
 
