@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="recipe-bg-html">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -25,17 +25,11 @@
         </style>
     </head>
 
-    <body>
-        <div class="recipe-bg row">
-            <img src="./assets/recipe-black.png">
-        </div>
-        
-        <div>
-            <a>
-                <span id="back"><img src="./assets/back_btn.png" class="back-btn pb-2"></span>
-                <!-- <h2 class="recommend-header">Back</h2> -->
-            </a>
-        </div>
+    <body style="background-color: rgba(255, 255, 255, 0);"> 
+
+        <a>
+            <span id="back"><img src="./assets/back_btn.png" class="back-btn pb-2"></span>
+        </a>
         
         <div class="dialog-space" style="top: 10vh;">
             <h6 style="color: #804F1E; text-align: center;">Please select the dish number:</h6>
@@ -46,16 +40,14 @@
                     <span class="plus-btn">+</span>
                 </div>
             </div>
-            
-            <div class="row">
-                <button type="button" class="default-btn mt-4" style="width: 100%;">OK</button>
-                <button type="button" class="default-btn mt-3" style="background-color: #FFF7EF; color: #804F1E; width: 100%;">Cancel</button>
-            </div>
+
+            <button type="button" class="default-btn mt-4" style="width: 100%;">OK</button>
+            <button type="button" class="default-btn mt-3" style="background-color: #FFF7EF; color: #804F1E; width: 100%;">Cancel</button>
         </div>
 
-        <div class="row">
+        <div class="row camera-recipe-btn">
             <div class="col-6"><button type="button" class="default-btn">Add to shopping list</button></div>
-            <div class="col-6"><button type="button" class="default-btn">Take again</button></div>
+            <div class="col-6"><button type="button" class="default-btn" style="background-color: #FFF7EF; color: #804F1E;">Take again</button></div>
         </div>    
 
             

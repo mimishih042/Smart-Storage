@@ -17,6 +17,14 @@ a {
     margin-bottom: 1.5rem;
 }
 
+.recipe-bg-html {
+    background: url(./assets/recipe-black.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 @font-face {
     font-family: MigraReg;
     src: url(./assets/font/Migra-Regular.woff);
@@ -722,4 +730,13 @@ table.recommend-table {
     text-align: center;
 }
 
+.camera-recipe-btn {
+    position: relative;
+    margin-top: 30vh;
+}
 
+.camera-recipe-btn button {
+    width: 100%;
+    height: 60px;
+    border-radius: 15px;
+}
