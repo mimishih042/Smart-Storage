@@ -75,7 +75,7 @@ window.onclick = function(event) {
           openDropdown.classList.remove('show');
         }
       }
-      dropdowns = document.getElementsByClassName("month-table month-dropdown");
+      dropdowns = document.getElementsByClassName("month-dropdown");
       for (i = 0; i < dropdowns.length; i++) {
         var openDropdown = dropdowns[i];
         if (openDropdown.classList.contains('show')) {
