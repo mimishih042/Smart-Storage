@@ -11,6 +11,10 @@ function clearNovTable() {
 }
 
 function renderNovList(data) {
+    var j = document.getElementById("nov-pagni");
+    j.style.display = "";
+    var k = document.getElementById("oct-pagni");
+    k.style.display = "none";
     var table = document.getElementById('nov-history-shopping-list')
     table.style.display = "";
     clearNovTable()
@@ -31,6 +35,8 @@ function renderNovList(data) {
 function hideOctList() {
   var x = document.getElementById("oct-history-shopping-list");
   x.style.display = "none";
+  var y = document.getElementById("oct-history-shopping-list-2");
+  y.style.display = "none";
 }
 
 function setTabLink() {
@@ -65,6 +71,11 @@ function showOctData() {
       openDropdown.classList.remove('show');
     }
   }
+  var j = document.getElementById("oct-pagni");
+  j.style.display = "";
+  var k = document.getElementById("nov-pagni");
+  k.style.display = "none";
+  selectPage1();
 }
 
 function showNovList() {
@@ -81,6 +92,10 @@ function showNovList() {
       openDropdown.classList.remove('show');
     }
   }
+  var j = document.getElementById("nov-pagni");
+  j.style.display = "";
+  var k = document.getElementById("oct-pagni");
+  k.style.display = "none";
 }
 
 function yearDropdown() {
@@ -113,6 +128,27 @@ window.onclick = function(event) {
     }
 }
 
+function selectPage2() {
+  var element = document.getElementById("pagiPage2");
+  element.classList.add("active");
+  var element2 = document.getElementById("pagiPage1");
+  element2.classList.remove("active");
+  var x = document.getElementById("oct-history-shopping-list-2");
+  x.style.display = "";
+  var y = document.getElementById("oct-history-shopping-list");
+  y.style.display = "none";
+}
+
+function selectPage1() {
+  var element = document.getElementById("pagiPage1");
+  element.classList.add("active");
+  var element2 = document.getElementById("pagiPage2");
+  element2.classList.remove("active");
+  var x = document.getElementById("oct-history-shopping-list");
+  x.style.display = "";
+  var y = document.getElementById("oct-history-shopping-list-2");
+  y.style.display = "none";
+}
 
 
 function main() {

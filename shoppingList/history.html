@@ -92,7 +92,7 @@
             <div id = "oct-history-shopping-list">
                 <table class="sortable list-table food-list" >
                     <tr>
-                        <th colspan="2">Created on: Oct/25/2021 </th>
+                        <th colspan="2">Created on: Oct/29/2021 </th>
                     </tr>
                     <tr>
                         <th style="width: 60%;">Item</th>
@@ -117,7 +117,7 @@
                 </table>
                 <table class="sortable list-table food-list" style="margin-top:15px">
                     <tr>
-                        <th colspan="2">Created on: Oct/29/2021 </th>
+                        <th colspan="2">Created on: Oct/25/2021 </th>
                     </tr>
                     <tr>
                         <th style="width: 60%;">Item</th>
@@ -137,12 +137,42 @@
                     </tr>
                 </table>
             </div>
+            <div id = "oct-history-shopping-list-2">
+                <table class="sortable list-table food-list" >
+                    <tr>
+                        <th colspan="2">Created on: Oct/23/2021 </th>
+                    </tr>
+                    <tr>
+                        <th style="width: 60%;">Item</th>
+                        <th style="width: 40%;">Qty</th>
+                    </tr>
+                    <tr>
+                        <td>apple juice</td>
+                        <td>10 lbs</td>
+                    </tr>
+                    <tr>
+                        <td>orange juice</td>
+                        <td>5 lbs</td>
+                    </tr>
+                    <tr>
+                        <td>broccolli</td>
+                        <td>6 lbs</td>
+                    </tr>
+                </table>
+            </div>
             
-            <div class="col-md-10 col-12">
+            <div class="col-md-10 col-12" id="oct-pagni">
                 <div class="pagination">
                     <page href="#">&laquo;</page>
-                    <page href="#">1</page>
-                    <page class="active" href="#">2</page>
+                    <page href="#" id="pagiPage1" onclick="selectPage1()">1</page>
+                    <page href="#" id="pagiPage2" onclick="selectPage2()">2</page>
+                    <page href="#">&raquo;</page>
+                </div>
+            </div>
+            <div class="col-md-10 col-12" id="nov-pagni">
+                <div class="pagination">
+                    <page href="#">&laquo;</page>
+                    <page href="#" id="pagiPage1" class="active">1</page>
                     <page href="#">&raquo;</page>
                 </div>
             </div>
