@@ -498,7 +498,8 @@ table.month-table td {
 }
 
 
-table.month-table td:focus {
+table.month-table td:focus, 
+table.month-table td:hover {
     padding: 1px;
     outline: 0;
     color: #fff;
