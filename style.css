@@ -128,7 +128,7 @@ thead {
 
 .default-btn {
     height: 50px;
-    width: 90%;
+    width: 100%;
     background: #FF5E00;
     color: white;
     border-radius: 50px;
@@ -137,7 +137,7 @@ thead {
 
 .disabled-btn {
     height: 50px;
-    width: 90%;
+    width: 100%;
     background: #DEDEDE;
     color: #747474;
     border-radius: 50px;
@@ -703,6 +703,13 @@ table.food-list {
 .table-scroll {
     /* height:500px; */
     height: 68vh;
+    overflow-y:auto;
+    padding-right: 0px;
+    padding-left: 0px;  
+    margin-bottom: 10px;
+}
+
+.table-scroll-generated-list {
     overflow-y:auto;
     padding-right: 0px;
     padding-left: 0px;  

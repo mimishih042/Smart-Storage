@@ -38,7 +38,7 @@
             <div class="col-12">
                 <h2 class="inventory-align" style="font-size: 1.7rem;">Generated Shopping List</h2>
             </div>
-            <div class="table-scroll" style="height: 60vh;">
+            <div class="table-scroll-generated-list">
                 <table class="sortable list-table inventory" >
                     <tr>
                         <th style="width: 40%;">Food</th>
@@ -46,9 +46,9 @@
                         <th style="width: 30%;">Qty</th>
                     </tr>
                     <tr>
-                        <td>Egg</td>
+                        <td onclick="adjustContent()" id="adjust2">Egg</td>
                         <td>40</td>
-                        <td>100</td>
+                        <td onclick="adjustCount()" id="adjust1">100</td>
                     </tr>
                     <tr>
                         <td>Salt (lbs)</td>
@@ -79,9 +79,13 @@
             </div>
         </div>
 
-        <div>
-            <button type="button" class="default-btn" style="width: 100%;">Ready to Add</button>
-            <button type="button" class="default-btn mt-3" style="background-color: #FFF7EF; color: #804F1E; width: 100%;">Cancel</button>
+
+        <button type="button" class="disabled-btn">Save</button>
+
+
+        <div style="margin-top: 20vh;">
+            <button type="button" class="default-btn" style="width: 100%;" onclick="addNewCount()">Confirm and add to shopping list</button>
+            <button type="button" onclick = "cancel()" class="default-btn mt-3" style="background-color: #FFF7EF; color: #804F1E; width: 100%;">Cancel</button>
         </div>
             
         
@@ -107,4 +111,65 @@
         
     </body>
 
+    <script>
+        count1 = 0;
+        function adjustCount() {
+          var selected =  document.getElementById('adjust1')
+          var div = document.createElement("div");
+          div.className = "input-counter";
+          var input = document.createElement("input");
+          input.type = "number";
+          input.value = 0;
+          input.step = 1;
+          input.id = "newCount";
+          div.appendChild(input);
+          if(count1 == 0) {
+              selected.innerHTML = '';
+              selected.appendChild(div)
+          }
+          count1++
+        }
+        
+        count2 = 0;
+        function adjustContent() {
+          var selected =  document.getElementById('adjust2')
+          var div = document.createElement("div");
+          div.className = "input-counter";
+          var input = document.createElement("input");
+          input.type = "text";
+          input.id = "newName";
+          div.appendChild(input);
+          if(count2 == 0) {
+              selected.innerHTML = '';
+              selected.appendChild(div)
+          }
+          count2++
+        } 
+
+        function addNewCount() {
+          var selected1 =  document.getElementById('adjust1')
+          if(document.getElementById("newCount") != null) {
+              var count = document.getElementById("newCount").value;
+              selected1.innerHTML = count;
+          }
+          var selected2 =  document.getElementById('adjust2');
+          if(document.getElementById("newName") != null) {
+              var name = document.getElementById("newName").value;
+              selected2.innerHTML = name;
+          }
+          count1 = 0;
+          count2 = 0;
+        }
+
+        function cancel() {
+          var selected1 =  document.getElementById('adjust1')
+          selected1.innerHTML = 100;
+          var selected2 =  document.getElementById('adjust2')
+          selected2.innerHTML = "Egg";
+          count1 = 0;
+          count2 = 0;
+        }
+
+    
+    </script>
 </html>
