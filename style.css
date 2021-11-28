@@ -513,7 +513,8 @@ table.month-table td {
 }
 
 
-table.month-table td:focus {
+table.month-table td:focus, 
+table.month-table td:hover {
     padding: 1px;
     outline: 0;
     color: #fff;
@@ -631,17 +632,18 @@ table.list-table .input-counter input {
     border: none;
     border-bottom: 1px solid #DEDEDE;
     width: 25%;
+
 }
   
   /* Style the buttons that are used to open the tab content */
 .tab button {
     background-color: inherit;
-    float: left;
     border: none;
     outline: none;
     padding: 14px 16px;
     transition: 0.3s;
     color: #6D3805;
+
 }
   
   /* Create an active/current tablink class */
@@ -767,4 +769,40 @@ table.recommend-table {
 .video-insert {
     margin-top: 10vh;
     width: 100%;
+}
+.shopping-tab{
+    width:100% !important;
+    display:flex;
+    justify-content: space-around;
+}
+
+.drop-btn {
+    height: 30px;
+    width: 20%;
+    position: relative;
+    background: #FFE6CC;
+    color: #6D3805;
+    border-radius: 5px;
+    border-width: 0px;
+    display: inline-block;
+    justify-content: space-around;
+}
+
+
+.year-dropdown {
+    display: none;
+    position:relative
+}
+
+.month-dropdown {
+    display: none;
+    position:relative
+}
+
+.show {
+    display:block;
+}
+
+.hide {
+    display: none;
 }
