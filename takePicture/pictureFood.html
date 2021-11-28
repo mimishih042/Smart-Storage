@@ -93,12 +93,8 @@
 
         function generateList() {
             if (document.getElementById("generate-food-list-btn").className == "default-btn") {
-                location.replace("../inventory/inventory.html")
+                location.replace("../index.html")
             }
-        }
-
-        function back() {
-            location.replace("./pictureForFood.html")
         }
 
         document.addEventListener('mouseup', function (e) {
@@ -148,11 +144,14 @@
 
 <body>
     <div class="row">
-        <div class="col-md-6 col-12">
-            <span id="back" onclick="back()"><img src="../assets/back_btn.png" class="back-btn"></span>
-            <h2 class="food-list-align">Your food list</h2>
+        <div>
+            <a href="./pictureForFood.html">
+                <span id="back"><img src="../assets/back_btn.png" class="back-btn pb-2"></span>
+            </a>
+            <h2 class="recommend-header" style="text-align: center;">Your food list</h2>
         </div>
-        <div class="table-scroll">
+
+        <div class="table-scroll" style="height: 65vh;">
             <table class="sortable list-table food-list">
                 <tr>
                     <th style="width: 20%;">Item</th>

@@ -749,11 +749,11 @@ table.recommend-table {
 }
 
 .take-picture-select-btn{
-    height: 100px;
-    margin-left: 18px;
-    margin-top: 125px;
+    height: 120px;
+    border-radius: 15px;
     align-items: center;
-
+    background: #FFF7EF;
+    color: #884c0d;
 }
 
 
@@ -765,7 +765,6 @@ table.recommend-table {
 
 
 .video-insert {
-    margin-top: 50px;
-    margin-left: 4px;
-    margin-bottom: 100px;
+    margin-top: 10vh;
+    width: 100%;
 }
