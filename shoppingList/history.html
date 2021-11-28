@@ -43,7 +43,7 @@
             <div class="col-md-2 col-12">
                 <p class="style-guide-p">Filter Shopping List</p>
                 <button type="button" onclick="monthDropdown()" class="drop-btn" id="month-btn">Nov</button>
-                <div class="month-table-container mt-3">
+                <!-- <div class="month-table-container mt-3">
                     <div id="month-dropdown-list" class="month-dropdown">
                         <table  class="month-table">
                         <tr>
@@ -68,16 +68,49 @@
                         </tr>
                     </table>
                     </div>
-                </div>
+                </div> -->
                 <button type="button" onclick="yearDropdown()" class="drop-btn" id="year-btn">2021</button>
-                    <div id="year-dropdown-list" class="year-table year-dropdown">
+                    <!-- <div id="year-dropdown-list" class="year-table year-dropdown">
                             <year href="#">&laquo;</year>
                             <year href="#">2019</year>
                             <year class="active" href="#">2020</year>
                             <year href="#">2021</year>
                             <year href="#">&raquo;</year>
-                    </div>
+                    </div> -->
             </div>
+            <div class="month-table-container mt-3">
+                <div id="month-dropdown-list" class="month-dropdown">
+                    <table  class="month-table">
+                    <tr>
+                        <td tabindex="-1" disabled>JAN</td>
+                        <td tabindex="-1" disabled>FEB</td>
+                        <td tabindex="-1" disabled>MAR</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1" disabled>APR</td>
+                        <td tabindex="-1" disabled>MAY</td>
+                        <td tabindex="-1" disabled>JUN</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1" disabled>JUL</td>
+                        <td tabindex="-1" disabled>AUG</td>
+                        <td tabindex="-1" disabled>SEP</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1" onclick=showOctData()>OCT</td>
+                        <td tabindex="-1" autofocus onclick=showNovList()>NOV</td>
+                        <td tabindex="-1" disabled>DEC</td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+            <div id="year-dropdown-list" class="year-table year-dropdown">
+                <year href="#">&laquo;</year>
+                <year href="#">2019</year>
+                <year class="active" href="#">2020</year>
+                <year href="#">2021</year>
+                <year href="#">&raquo;</year>
+        </div>
         </div>
         <div class="table-scroll month-table">
             <table class="sortable list-table food-list" id = "nov-history-shopping-list">
