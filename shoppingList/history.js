@@ -67,6 +67,22 @@ function showOctData() {
   }
 }
 
+function showNovList() {
+  var x = document.getElementById("nov-history-shopping-list");
+  x.style.display = "";
+  var y = document.getElementById("oct-history-shopping-list");
+  y.style.display = "none";
+  document.getElementById("month-btn").innerText="Nov";
+  var dropdowns = document.getElementsByClassName("month-dropdown");
+  var i;
+  for (i = 0; i < dropdowns.length; i++) {
+    var openDropdown = dropdowns[i];
+    if (openDropdown.classList.contains('show')) {
+      openDropdown.classList.remove('show');
+    }
+  }
+}
+
 function yearDropdown() {
     document.getElementById("year-dropdown-list").classList.toggle("show");
 }
@@ -96,6 +112,7 @@ window.onclick = function(event) {
       }
     }
 }
+
 
 
 function main() {
