@@ -752,3 +752,23 @@ table.recommend-table {
 .hide {
     display: none;
 }
+
+.shopping-list-item {
+    overflow: hidden;
+    padding: 10px;
+}
+
+.shopping-list-item span {
+
+    height: auto !important;
+    float: right;
+
+}
+.shopping-list-item span p {
+    color: #FF5E00;
+    margin-bottom: 5px;
+}
+
+.detail-info {
+    background: #FFF7EF;
+}
