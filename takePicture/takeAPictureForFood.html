@@ -35,19 +35,42 @@
     <div class="col-md-6 col-12">
         <h2 class="food-list-align">Take a Photo For Your Food</h2>
     </div>
-    <div>
-        <video id="video" width="300" height="300" autoplay></video>
-        <button id="snap" type="button" class="default-btn">
-            Take A Photo
-        </button>
+    <div class="videoContainer">
+        <video id="video" class="video-insert" width="300" height="300" autoplay></video>
+        <h6 class="food-list-align"> 
+            Make sure all the expiration dates (if any) can be seen from the photo
+        </h6>
+        <a href="pictureForFood.html">
+            <button type="button" class="default-btn take-photo-btn">
+                Take A Photo
+            </button>
+        </a>
+    </div>
+    <div class="row navbar ">
+        <div class="ss-navbar ss-app-navbar">
+            <button class="navbar-button">
+                <img src="../assets/navbar/camera.svg" class="navbar-button-clicked">
+                <p class="navbar-p navbar-p-clicked mt-1">Camera</p>
+            </button>
+            <button class="navbar-button">
+                <img src="../assets/navbar/shopping.svg">
+                <p class="navbar-p mt-1">Shopping List</p>
+            </button>
+            <a href="../inventory/inventory.html">
+                <button class="navbar-button">
+                    <img src="../assets/navbar/inventory.svg">
+                    <p class="navbar-p mt-1">Inventory</p>
+                </button>
+            </a>
+            <button class="navbar-button">
+                <img src="../assets/navbar/settings.svg">
+                <p class="navbar-p">Settings</p>
+            </button>
+        </div>
+
     </div>
     <script>
         var video = document.getElementById('video');
-
-        // Trigger photo take
-        document.getElementById("snap").addEventListener("click", function () {
-            location.replace("./pictureForFood.html")
-        });
 
         //Get access to the camera!
         if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
@@ -58,7 +81,6 @@
                 video.play();
             });
         }
-
 
     </script>
 </body>
