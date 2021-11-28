@@ -26,9 +26,11 @@ function renderNovList(data) {
             </tr>
         `
     }
-    var x = document.getElementById("oct-history-shopping-list");
-    x.style.display = "none";
-    
+}
+
+function hideOctList() {
+  var x = document.getElementById("oct-history-shopping-list");
+  x.style.display = "none";
 }
 
 function setTabLink() {
@@ -54,6 +56,15 @@ function showOctData() {
   x.style.display = "";
   var y = document.getElementById("nov-history-shopping-list");
   y.style.display = "none";
+  document.getElementById("month-btn").innerText="Oct";
+  var dropdowns = document.getElementsByClassName("month-dropdown");
+  var i;
+  for (i = 0; i < dropdowns.length; i++) {
+    var openDropdown = dropdowns[i];
+    if (openDropdown.classList.contains('show')) {
+      openDropdown.classList.remove('show');
+    }
+  }
 }
 
 function yearDropdown() {
@@ -66,7 +77,8 @@ function monthDropdown() {
   
   // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
-    if (!event.target.matches('.drop-btn')) {
+    if (!(event.target.matches('.drop-btn') || event.target.closest("div").matches('.month-dropdown') 
+      || event.target.closest("div").matches('.year-table year-dropdown'))) {
       var dropdowns = document.getElementsByClassName("year-table year-dropdown");
       var i;
       for (i = 0; i < dropdowns.length; i++) {
@@ -88,7 +100,10 @@ window.onclick = function(event) {
 
 function main() {
     setTabLink();
-    renderNovList(purchased);
+    hideOctList();    
+    if (purchased != null) {
+      renderNovList(purchased);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', main);
