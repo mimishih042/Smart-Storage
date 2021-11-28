@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" class="app-html">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" />
+    <script>
+
+        function decideBtnColor() {
+            var selected = document.querySelectorAll('input[type="checkbox"]:checked').length
+            if (selected != 0) {
+                document.getElementById("generate-food-list-btn").className = "default-btn"
+            } else {
+                document.getElementById("generate-food-list-btn").className = "disabled-btn"
+            }
+
+        }
+
+        function firstItemMinus() {
+            var value = document.getElementById("item1").value
+            if (value > 0) {
+                document.getElementById("item1").value = value - 1
+            }
+        }
+        function secondItemMinus() {
+            var value = document.getElementById("item2").value
+            if (value > 0) {
+                document.getElementById("item2").value = value - 1
+            }
+        }
+        function thirdItemMinus() {
+            var value = document.getElementById("item3").value
+            if (value > 0) {
+                document.getElementById("item3").value = value - 1
+            }
+        }
+
+        function fourthItemMinus() {
+            var value = document.getElementById("item4").value
+            if (value > 0) {
+                document.getElementById("item4").value = value - 1
+            }
+        }
+        function fifthItemMinus() {
+            var value = document.getElementById("item5").value
+            if (value > 0) {
+                document.getElementById("item5").value = value - 1
+            }
+        }
+        function sixItemMinus() {
+            var value = document.getElementById("item6").value
+            if (value > 0) {
+                document.getElementById("item6").value = value - 1
+            }
+        }
+
+        function firstItemPlus() {
+            var value = parseInt(document.getElementById("item1").value) + 1
+            document.getElementById("item1").value = value
+
+        }
+        function secondItemPlus() {
+            var value = parseInt(document.getElementById("item2").value) + 1
+            document.getElementById("item2").value = value
+        }
+        function thirdItemPlus() {
+            var value = parseInt(document.getElementById("item3").value) + 1
+            document.getElementById("item3").value = value
+        }
+
+        function fourthItemPlus() {
+            var value = parseInt(document.getElementById("item4").value) + 1
+            document.getElementById("item4").value = value
+        }
+        function fifthItemPlus() {
+            var value = parseInt(document.getElementById("item5").value) + 1
+            document.getElementById("item5").value = value
+        }
+        function sixItemPlus() {
+            var value = parseInt(document.getElementById("item6").value) + 1
+            document.getElementById("item6").value = value
+        }
+
+        function pickDate1() {
+            var selected = document.getElementById("date1")
+            var date = selected.innerHTML;
+            if (selected.style.display !== 'none') selected.style.display = 'none';
+            var form1 = document.getElementById("changeDateForm1")
+            form1.style.display = 'block';
+            var inputContent = document.getElementById("newDateInput1")
+            inputContent.value = date
+        }
+
+        function pickDate2() {
+            var selected = document.getElementById("date2")
+            var date = selected.innerHTML;
+            if (selected.style.display !== 'none') selected.style.display = 'none';
+            var form2 = document.getElementById("changeDateForm2")
+            form2.style.display = 'block';
+            var inputContent = document.getElementById("newDateInput2")
+            inputContent.value = date
+        }
+
+        function pickDate3() {
+            var selected = document.getElementById("date3")
+            var date = selected.innerHTML;
+            if (selected.style.display !== 'none') selected.style.display = 'none';
+            var form3 = document.getElementById("changeDateForm3")
+            form3.style.display = 'block';
+            var inputContent = document.getElementById("newDateInput3")
+            inputContent.value = date
+        }
+
+        function pickDate4() {
+            var selected = document.getElementById("date4")
+            var date = selected.innerHTML;
+            if (selected.style.display !== 'none') selected.style.display = 'none';
+            var form4 = document.getElementById("changeDateForm4")
+            form4.style.display = 'block';
+            var inputContent = document.getElementById("newDateInput4")
+            inputContent.value = date
+        }
+
+        function pickDate5() {
+            var selected = document.getElementById("date5")
+            var date = selected.innerHTML;
+            if (selected.style.display !== 'none') selected.style.display = 'none';
+            var form5 = document.getElementById("changeDateForm5")
+            form5.style.display = 'block';
+            var inputContent = document.getElementById("newDateInput5")
+            inputContent.value = date
+        }
+        function pickDate6() {
+            var selected = document.getElementById("date6")
+            var date = selected.innerHTML;
+            if (selected.style.display !== 'none') selected.style.display = 'none';
+            var form6 = document.getElementById("changeDateForm6")
+            form6.style.display = 'block';
+            var inputContent = document.getElementById("newDateInput6")
+            inputContent.value = date
+        }
+
+        function generateList() {
+            if (document.getElementById("generate-food-list-btn").className == "default-btn") {
+                location.replace("../index.html")
+            }
+        }
+
+        document.addEventListener('mouseup', function (e) {
+            var form1 = document.getElementById('changeDateForm1')
+            var form2 = document.getElementById('changeDateForm2')
+            var form3 = document.getElementById('changeDateForm3')
+            var form4 = document.getElementById('changeDateForm4')
+            var form5 = document.getElementById('changeDateForm5')
+            var form6 = document.getElementById('changeDateForm6')
+            var selected1 = document.getElementById("date1")
+            var selected2 = document.getElementById("date2")
+            var selected3 = document.getElementById("date3")
+            var selected4 = document.getElementById("date4")
+            var selected5 = document.getElementById("date5")
+            var selected6 = document.getElementById("date6")
+            if (!form1.contains(e.target) && selected1.style.display === 'none'
+                && form1.style.display === 'block') {
+                var date1 = form1.newDateInput1.value
+                selected1.innerHTML = date1
+                selected1.style.display = 'block'
+                form1.style.display = 'none'
+            }
+            if (!form2.contains(e.target) && selected2.style.display === 'none'
+                && form2.style.display === 'block') {
+                var date2 = form2.newDateInput2.value
+                selected2.innerHTML = date2
+                selected2.style.display = 'block'
+                form2.style.display = 'none'
+            }
+            if (!form3.contains(e.target) && selected3.style.display === 'none'
+                && form3.style.display === 'block') {
+                var date3 = form3.newDateInput3.value
+                selected3.innerHTML = date3
+                selected3.style.display = 'block'
+                form3.style.display = 'none'
+            }
+            if (!form4.contains(e.target) && selected4.style.display === 'none'
+                && form4.style.display === 'block') {
+                var date4 = form4.newDateInput4.value
+                selected4.innerHTML = date4
+                selected4.style.display = 'block'
+                form4.style.display = 'none'
+            }
+            if (!form5.contains(e.target) && selected5.style.display === 'none'
+                && form5.style.display === 'block') {
+                var date5 = form5.newDateInput5.value
+                selected5.innerHTML = date5
+                selected5.style.display = 'block'
+                form5.style.display = 'none'
+            }
+            if (!form6.contains(e.target) && selected6.style.display === 'none'
+                && form6.style.display === 'block') {
+                var date6 = form6.newDateInput6.value
+                selected6.innerHTML = date6
+                selected6.style.display = 'block'
+                form6.style.display = 'none'
+            }
+        }
+        );
+    </script>
+    <title>Smart Storage Design System</title>
+</head>
+<style>
+    @media only screen and (max-width:500px) {
+
+        /* For mobile phones: */
+        .menu,
+        .main,
+        .right {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <div class="row">
+        <div>
+            <a href="./pictureForFood.html">
+                <span id="back"><img src="../assets/back_btn.png" class="back-btn pb-2"></span>
+            </a>
+            <h2 class="recommend-header" style="text-align: center;">Your food list</h2>
+        </div>
+
+        <div class="table-scroll" style="height: 65vh;">
+            <table class="sortable list-table food-list">
+                <tr>
+                    <th style="width: 40%;">Food</th>
+                    <th style="width: 30%;">Curr</th>
+                    <th style="width: 30%;">Qty</th>
+                </tr>
+                <tr>
+                    <td>
+                        Egg
+                    </td>
+                    <td>
+                        <div class="mt-3">
+                            <div class="input-counter">
+                                <span class="minus-btn" onclick="firstItemMinus()">-</span>
+                                <input id="item1" type="text" value="40">
+                                <span class="plus-btn" onclick="firstItemPlus()">+</span>
+                            </div>
+                        </div>
+                    </td>
+
+                    <td onclick="pickDate1()">
+                        <p class="date-in-list" id="date1">100</p>
+                        <form class="change-date-form" id="changeDateForm1">
+                            <input type="text" class="date-input" id="newDateInput1" name="newDateInput1"
+                                value="100"><br>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Salt
+                        <br>(lb)
+                    </td>
+                    <td>
+                        <div class="mt-3">
+                            <div class="input-counter">
+                                <span class="minus-btn" onclick="secondItemMinus()">-</span>
+                                <input id="item2" type="text" value="5">
+                                <span class="plus-btn" onclick="secondItemPlus()">+</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td onclick="pickDate2()">
+                        <p id="date2" class="date-in-list">1</p>
+                        <form class="change-date-form" id="changeDateForm2">
+                            <input type="text" class="date-input" id="newDateInput2" name="newDateInput2"
+                                value="1"><br>
+                        </form>
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td>Pepper
+                        <br>(lb)
+                    </td>
+                    <td>
+                        <div class="mt-3">
+                            <div class="input-counter">
+                                <span class="minus-btn" onclick="thirdItemMinus()">-</span>
+                                <input id="item3" type="text" value="5">
+                                <span class="plus-btn" onclick="thirdItemPlus()">+</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td onclick="pickDate3()">
+                        <p id="date3" class="date-in-list">1</p>
+                        <form class="change-date-form" id="changeDateForm3">
+                            <input type="text" class="date-input" id="newDateInput3" name="newDateInput3"
+                                value="1"><br>
+                        </form>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Tomato
+                    </td>
+                    <td>
+                        <div class="mt-3">
+                            <div class="input-counter">
+                                <span class="minus-btn" onclick="fourthItemMinus()">-</span>
+                                <input id="item4" type="text" value="50">
+                                <span class="plus-btn" onclick="fourthItemPlus()">+</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td onclick="pickDate4()">
+                        <p id="date4" class="date-in-list">50</p>
+                        <form class="change-date-form" id="changeDateForm4">
+                            <input type="text" class="date-input" id="newDateInput4" name="newDateInput4"
+                                value="50"><br>
+                        </form>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Spinach
+                        <br>(lb)
+                    </td>
+                    <td>
+                        <div class="mt-3">
+                            <div class="input-counter">
+                                <span class="minus-btn" onclick="fifthItemMinus()">-</span>
+                                <input id="item5" type="text" value="30">
+                                <span class="plus-btn" onclick="fifthItemPlus()">+</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td onclick="pickDate5()">
+                        <p id="date5" class="date-in-list">20</p>
+                        <form class="change-date-form" id="changeDateForm5">
+                            <input type="text" class="date-input" id="newDateInput5" name="newDateInput5"
+                                value="20"><br>
+                        </form>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Sausage
+                    </td>
+                    <td>
+                        <div class="mt-3">
+                            <div class="input-counter">
+                                <span class="minus-btn" onclick="sixItemMinus()">-</span>
+                                <input id="item6" type="text" value="20">
+                                <span class="plus-btn" onclick="sixItemPlus()">+</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td onclick="pickDate6()">
+                        <p id="date6" class="date-in-list">20</p>
+                        <form class="change-date-form" id="changeDateForm6">
+                            <input type="text" class="date-input" id="newDateInput6" name="newDateInput6"
+                                value="20"><br>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <br>
+                <br>
+            </div>
+            <div>
+                <button type="button" class="default-btn" style="width: 100%;">Confirm and add to shopping list</button>
+                <button type="button" class="default-btn mt-3" style="background-color: #FFF7EF; color: #804F1E; width: 100%;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <div class="ss-navbar ss-app-navbar">
+        <div class="navbar-elem">
+            <img src="../assets/navbar/camera.svg" class="navbar-elem-clicked">
+            <p class="navbar-p navbar-p-clicked">Camera</p>
+        </div>
+        <div class="navbar-elem">
+            <img src="../assets/navbar/shopping.svg">
+            <p class="navbar-p">Shopping List</p>
+        </div>
+        <div class="navbar-elem">
+            <img src="../assets/navbar/inventory.svg">
+            <p class="navbar-p" >Inventory</p>
+        </div>
+        <div class="navbar-elem">
+            <img src="../assets/navbar/settings.svg">
+            <p class="navbar-p">Settings</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
