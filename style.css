@@ -747,3 +747,25 @@ table.recommend-table {
     height: 60px;
     border-radius: 15px;
 }
+
+.take-picture-select-btn{
+    height: 100px;
+    margin-left: 18px;
+    margin-top: 125px;
+    align-items: center;
+
+}
+
+
+.take-photo-btn{
+    margin-left: 16px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+
+.video-insert {
+    margin-top: 50px;
+    margin-left: 4px;
+    margin-bottom: 100px;
+}

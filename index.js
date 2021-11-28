@@ -11,8 +11,9 @@ var list = [
     { name: 'Green Tea Leaves', qty:'12 oz', expiration: '08/25/2022', id: 8 },
     { name: 'Lemon', qty:'10' ,expiration: '01/14/2022', id: 9 },
     { name: 'Milk', qty:'2', expiration: '12/11/2021', id: 10 },
-
-
+    { name: 'Mandarin', qty:'2', expiration: '12/20/2021', id: 11 },
+    { name: 'Cherry', qty:'2', expiration: '12/22/2021', id: 12 },
+    { name: 'Pomegranate', qty:'1', expiration: '01/30/2022', id: 13 }
 ];
 
 function decideBtnColor() {
