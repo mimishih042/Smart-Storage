@@ -13,115 +13,71 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
         <link href="./style.css" rel="stylesheet" />
         <title>Smart Storage Design System</title>
+        <style>
+            .recipe-bg {
+                position: relative; 
+                width: 100%;
+                height: 100%;
+                z-index: -100; 
+                top: 0px; 
+                left: 0px;
+            }
+        </style>
     </head>
-    <style>
-        @media only screen and (max-width:500px) {
-        /* For mobile phones: */
-        .menu, .main, .right {
-            width: 100%;
-        }
-        .recipe {
-            float:left;
-        }
-        }
-        .navbar-button2 {
-            align-items: center;
-            text-align: center; 
-            cursor: pointer;
-            float: left;
-            width: 50%;
-            height: 50px;
-            border: none;
-            background:none;
 
-        }
-        .default-btn {
-            height: 40px;
-            width: 50%;
-            background: #FF5E00;
-            color: white;
-            border-radius: 50px;
-            border-width: 0px;
-        }
-    </style>
     <body>
-        <div>
-            <img src="./assets/back_btn.png" class="back-btn">
+        <div class="recipe-bg row">
+            <img src="./assets/recipe-black.png">
         </div>
         
-            <div class="col-md-10 col-12">
-                <div class="dialog-elem">
-                    <div class="dialog-space">
-                        <p style="color: #804F1E;">How to Make an Omelette</p>
-                        <p style="color: grey;">-Beat the eggs</p>
-                        <br>
-                        <div class="dialog-elem2">
-                            <div class="dialog-space">
-                                <h6 style="color: #804F1E;">Please select the dish number:</h6>
-                                <div class="mt-3">
-                                    <div class="input-counter">
-                                        <span class="minus-btn">-</span>
-                                        <input type="text" value="50">
-                                        <span class="plus-btn">+</span>
-                                    </div>
-                                </div>
-                                
-                                    <div>
-                                        <div>
-                                            <button type="button" class="default-btn">OK</button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <button type="button" class="default-btn">Cancel</button>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div class = "recipe">
-                            <p style="color: #804F1E;">Add tomato, spinach and sausage</p>
-                            <p style="color: #804F1E;">When the eggs begin to set</p>
-                            <p style="color: #804F1E;">Cook for a few more seconds.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-      
-        
-            
-            <div>
-                <button type="button" class="default-btn">Add to shopping list</button>
-            </div>
-            <br>
-            <div>
-                <button type="button" class="default-btn">Take again</button>
-            </div>
-            
-            <div class="ss-navbar ss-app-navbar">
-                <div class="navbar-elem">
-                    <img src="./assets/navbar/camera.svg" class="navbar-elem-clicked">
-                    <p class="navbar-p navbar-p-clicked">Camera</p>
-                </div>
-                <div class="navbar-elem">
-                    <img src="./assets/navbar/shopping.svg">
-                    <p class="navbar-p">Shopping List</p>
-                </div>
-                <div class="navbar-elem">
-                    <img src="./assets/navbar/inventory.svg">
-                    <p class="navbar-p" >Inventory</p>
-                </div>
-                <div class="navbar-elem">
-                    <img src="./assets/navbar/settings.svg">
-                    <p class="navbar-p">Settings</p>
-                </div>
-            </div>
-           
         <div>
+            <a>
+                <span id="back"><img src="./assets/back_btn.png" class="back-btn pb-2"></span>
+                <!-- <h2 class="recommend-header">Back</h2> -->
+            </a>
+        </div>
         
+        <div class="dialog-space" style="top: 10vh;">
+            <h6 style="color: #804F1E; text-align: center;">Please select the dish number:</h6>
+            <div class="mt-3" style="text-align: center;">
+                <div class="input-counter" style="margin-left: auto; margin-right: auto;">
+                    <span class="minus-btn">-</span>
+                    <input type="text" value="50">
+                    <span class="plus-btn">+</span>
+                </div>
+            </div>
+            
+            <div class="row">
+                <button type="button" class="default-btn mt-4" style="width: 100%;">OK</button>
+                <button type="button" class="default-btn mt-3" style="background-color: #FFF7EF; color: #804F1E; width: 100%;">Cancel</button>
+            </div>
+        </div>
 
-        
-        
+        <div class="row">
+            <div class="col-6"><button type="button" class="default-btn">Add to shopping list</button></div>
+            <div class="col-6"><button type="button" class="default-btn">Take again</button></div>
+        </div>    
+
+            
+        <div class="ss-navbar ss-app-navbar">
+            <div class="navbar-elem">
+                <img src="./assets/navbar/camera.svg" class="navbar-elem-clicked">
+                <p class="navbar-p navbar-p-clicked">Camera</p>
+            </div>
+            <div class="navbar-elem">
+                <img src="./assets/navbar/shopping.svg">
+                <p class="navbar-p">Shopping List</p>
+            </div>
+            <div class="navbar-elem">
+                <img src="./assets/navbar/inventory.svg">
+                <p class="navbar-p" >Inventory</p>
+            </div>
+            <div class="navbar-elem">
+                <img src="./assets/navbar/settings.svg">
+                <p class="navbar-p">Settings</p>
+            </div>
+        </div>
+           
     </body>
 
 </html>
