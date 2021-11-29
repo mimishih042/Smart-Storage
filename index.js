@@ -13,7 +13,10 @@ var list = [
     { name: 'Milk', qty:'2', expiration: '12/11/2021', id: 10 },
     { name: 'Mandarin', qty:'2', expiration: '12/20/2021', id: 11 },
     { name: 'Cherry', qty:'2', expiration: '12/22/2021', id: 12 },
-    { name: 'Pomegranate', qty:'1', expiration: '01/30/2022', id: 13 }
+    { name: 'Pomegranate', qty:'1', expiration: '01/30/2022', id: 13 },
+    { name: 'Brussel Sprouts (lbs)', qty:'2', expiration: '12/15/2021', id: 14 },
+    { name: 'Broccoli (lbs)', qty:'2', expiration: '12/15/2021', id: 15 },
+    { name: 'Sweet Potato (count)', qty:'1', expiration: '12/20/2021', id: 16 }
 ];
 
 function decideBtnColor() {
