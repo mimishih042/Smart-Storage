@@ -35,9 +35,12 @@ function renderInfo() {
     }
     var count = document.getElementById("item-count")
     var time = document.getElementById("created-time")
-
+    var itemNumber = 0
+    if (detail[id].list != null) {
+        itemNumber = detail[id].list.length
+    }
     count.innerHTML = `
-        Total items: ${detail[id].list.length}
+        Total items: ${itemNumber}
     `
     time.innerHTML = `
         Created on: ${detail[id].date}
