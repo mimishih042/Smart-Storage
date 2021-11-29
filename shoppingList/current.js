@@ -162,14 +162,16 @@ function showNewItemDialog() {
 
 
 function addNewItem() {
+    var len = list.length;
     var newItem = document.getElementById("input-item").value;
     var newQty = document.getElementById("input-qty").value;
     list.push({name: newItem,
                 qty: newQty,
                 expiration:"12/2/2021",
-                id:10})
+                id:list[len-1].id+1})
     hideNewItemDialog();
     renderList(list);
+    console.log(list)
     document.getElementById("input-item").value = "";
     document.getElementById("input-qty").value = "";
 }
