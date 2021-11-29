@@ -724,7 +724,7 @@ table.food-list {
 
 .table-scroll {
     /* height:500px; */
-    height: 68vh;
+    height: 48vh;
     overflow-y:auto;
     padding-right: 0px;
     padding-left: 0px;  
