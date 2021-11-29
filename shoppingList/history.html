@@ -32,51 +32,19 @@
 
 <body>
     <div class="row">
-        <div class="col-md-6 col-12">
-            <h2 class="food-list-align">Your food list</h2>
+        <div class="col-12">
+            <h2 class="food-list-align">Your Shopping List</h2>
         </div>
-        <div class="row tab-example mb-4">
+        <div class="tab-example mb-4">
             <div class="tab shopping-tab">
                 <button id="current" class="tablinks">Current</button>
                 <button id="history" class="tablinks active">History</button>
             </div>
-            <div class="col-md-2 col-12">
-                <p class="style-guide-p">Filter Shopping List</p>
-                <button type="button" onclick="monthDropdown()" class="drop-btn" id="month-btn">Nov</button>
-                <!-- <div class="month-table-container mt-3">
-                    <div id="month-dropdown-list" class="month-dropdown">
-                        <table  class="month-table">
-                        <tr>
-                            <td tabindex="-1" disabled>JAN</td>
-                            <td tabindex="-1" disabled>FEB</td>
-                            <td tabindex="-1" disabled>MAR</td>
-                        </tr>
-                        <tr>
-                            <td tabindex="-1" disabled>APR</td>
-                            <td tabindex="-1" disabled>MAY</td>
-                            <td tabindex="-1" disabled>JUN</td>
-                        </tr>
-                        <tr>
-                            <td tabindex="-1" disabled>JUL</td>
-                            <td tabindex="-1" disabled>AUG</td>
-                            <td tabindex="-1" disabled>SEP</td>
-                        </tr>
-                        <tr>
-                            <td tabindex="-1" onclick=showOctData()>OCT</td>
-                            <td tabindex="-1" autofocus onclick=showNovList()>NOV</td>
-                            <td tabindex="-1" disabled>DEC</td>
-                        </tr>
-                    </table>
-                    </div>
-                </div> -->
-                <button type="button" onclick="yearDropdown()" class="drop-btn" id="year-btn">2021</button>
-                    <!-- <div id="year-dropdown-list" class="year-table year-dropdown">
-                            <year href="#">&laquo;</year>
-                            <year href="#">2019</year>
-                            <year class="active" href="#">2020</year>
-                            <year href="#">2021</year>
-                            <year href="#">&raquo;</year>
-                    </div> -->
+            <div>
+                <div class="row mt-3">
+                    <div class="col-6"><button type="button" onclick="yearDropdown()" class="drop-btn" id="year-btn">2021</button></div>
+                    <div class="col-6"><button type="button" onclick="monthDropdown()" class="drop-btn" id="month-btn">Nov</button></div>
+                </div>          
             </div>
             <div class="month-table-container mt-3">
                 <div id="month-dropdown-list" class="month-dropdown">
@@ -144,16 +112,16 @@
                         <th style="width: 40%;">Qty</th>
                     </tr>
                     <tr>
-                        <td>apple</td>
-                        <td>10 lbs</td>
+                        <td>Apple (lbs)</td>
+                        <td>10</td>
                     </tr>
                     <tr>
-                        <td>corn oil</td>
-                        <td>5 lbs</td>
+                        <td>Corn oil (lbs)</td>
+                        <td>5</td>
                     </tr>
                     <tr>
-                        <td>peach</td>
-                        <td>6 lbs</td>
+                        <td>Peach (lbs)</td>
+                        <td>6</td>
                     </tr>
                 </table>
                 </div>
@@ -170,16 +138,16 @@
                         <th style="width: 40%;">Qty</th>
                     </tr>
                     <tr>
-                        <td>orange</td>
-                        <td>10 lbs</td>
+                        <td>Orange (lbs)</td>
+                        <td>10</td>
                     </tr>
                     <tr>
-                        <td>red pepper</td>
-                        <td>5 lbs</td>
+                        <td>Red pepper (lbs)</td>
+                        <td>5</td>
                     </tr>
                     <tr>
-                        <td>green pepper</td>
-                        <td>6 lbs</td>
+                        <td>Green pepper (lbs)</td>
+                        <td>6</td>
                     </tr>
                 </table>
                 </div>
@@ -197,23 +165,23 @@
                         <th style="width: 40%;">Qty</th>
                     </tr>
                     <tr>
-                        <td>apple juice</td>
-                        <td>10 lbs</td>
+                        <td>Apple juice (lbs)</td>
+                        <td>10</td>
                     </tr>
                     <tr>
-                        <td>orange juice</td>
-                        <td>5 lbs</td>
+                        <td>Orange juice (lbs)</td>
+                        <td>5</td>
                     </tr>
                     <tr>
-                        <td>broccolli</td>
-                        <td>6 lbs</td>
+                        <td>Broccoli (lbs)</td>
+                        <td>6</td>
                     </tr>
                 </table>
                 </div>
             </div>
             
-            <div class="col-md-10 col-12" id="oct-pagni">
-                <div class="pagination">
+            <div class="col-12 mt-3" id="oct-pagni">
+                <div class="pagination" style="padding-left: 26%;">
                     <page href="#">&laquo;</page>
                     <page href="#" id="pagiPage1" onclick="selectPage1()">1</page>
                     <page href="#" id="pagiPage2" onclick="selectPage2()">2</page>
@@ -221,7 +189,7 @@
                 </div>
             </div>
             <div class="col-md-10 col-12" id="nov-pagni">
-                <div class="pagination">
+                <div class="pagination" style="padding-left: 26%;">
                     <page href="#">&laquo;</page>
                     <page href="#" id="pagiPage1" class="active">1</page>
                     <page href="#">&raquo;</page>
@@ -235,8 +203,8 @@
                 <img src="../assets/navbar/camera.svg" >
                 <p class="navbar-p  mt-1">Camera</p>
             </button>
-            <button class="navbar-button" class="navbar-button-clicked">
-                <img src="../assets/navbar/shopping.svg">
+            <button class="navbar-button">
+                <img src="../assets/navbar/shopping.svg" class="navbar-button-clicked">
                 <p class="navbar-p navbar-p-clicked mt-1">Shopping List</p>
             </button>
             <button class="navbar-button">

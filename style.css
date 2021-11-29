@@ -477,10 +477,11 @@ thead {
 .year-table year {
     color: #804F1E;
     float: left;
-    padding: 8px 16px;
+    padding: 8px 19px;
     text-decoration: none;
     border: 1px solid #DFE3E8;
     border-radius: 5px;
+    
 }
 
 
@@ -491,6 +492,8 @@ thead {
 }
 
 table.month-table {
+    margin-left: auto;
+    margin-right: auto;
     clear: both;
     display: block;
     border: none;
@@ -644,7 +647,7 @@ table.list-table .input-counter input {
     padding: 14px 16px;
     transition: 0.3s;
     color: #6D3805;
-
+    width: 50%;
 }
   
   /* Create an active/current tablink class */
@@ -778,15 +781,13 @@ table.recommend-table {
 }
 
 .drop-btn {
-    height: 30px;
-    width: 20%;
-    position: relative;
+    height: 40px;
+    width: 100%;
     background: #FFE6CC;
     color: #6D3805;
-    border-radius: 5px;
+    border-radius: 10px;
     border-width: 0px;
     display: inline-block;
-    justify-content: space-around;
 }
 
 
@@ -840,4 +841,5 @@ table.recommend-table {
 
 .detail-info {
     background: #FFF7EF;
+    border-radius: 10px;
 }
