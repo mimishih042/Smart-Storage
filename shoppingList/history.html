@@ -43,7 +43,7 @@
             <div class="col-md-2 col-12">
                 <p class="style-guide-p">Filter Shopping List</p>
                 <button type="button" onclick="monthDropdown()" class="drop-btn" id="month-btn">Nov</button>
-                <div class="month-table-container mt-3">
+                <!-- <div class="month-table-container mt-3">
                     <div id="month-dropdown-list" class="month-dropdown">
                         <table  class="month-table">
                         <tr>
@@ -68,31 +68,76 @@
                         </tr>
                     </table>
                     </div>
-                </div>
+                </div> -->
                 <button type="button" onclick="yearDropdown()" class="drop-btn" id="year-btn">2021</button>
-                    <div id="year-dropdown-list" class="year-table year-dropdown">
+                    <!-- <div id="year-dropdown-list" class="year-table year-dropdown">
                             <year href="#">&laquo;</year>
                             <year href="#">2019</year>
                             <year class="active" href="#">2020</year>
                             <year href="#">2021</year>
                             <year href="#">&raquo;</year>
-                    </div>
+                    </div> -->
+            </div>
+            <div class="month-table-container mt-3">
+                <div id="month-dropdown-list" class="month-dropdown">
+                    <table  class="month-table">
+                    <tr>
+                        <td tabindex="-1" onclick="showNoData('JAN')" >JAN</td>
+                        <td tabindex="-1" onclick="showNoData('FEB')" >FEB</td>
+                        <td tabindex="-1" onclick="showNoData('MAR')">MAR</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1" onclick="showNoData('APR')">APR</td>
+                        <td tabindex="-1"  onclick="showNoData('MAY')">MAY</td>
+                        <td tabindex="-1"  onclick="showNoData('JUN')">JUN</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1"  onclick="showNoData('JUL')">JUL</td>
+                        <td tabindex="-1"  onclick="showNoData('AUG')">AUG</td>
+                        <td tabindex="-1"  onclick="showNoData('SEP')">SEP</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="-1" onclick="showOctData('OCT')">OCT</td>
+                        <td tabindex="-1"  onclick="showNovList('NOV')">NOV</td>
+                        <td tabindex="-1"  onclick="showNoData('DEC')">DEC</td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+            <div id="year-dropdown-list" class="year-table year-dropdown">
+                <year href="#">&laquo;</year>
+                <year href="#">2020</year>
+                <year class="active" href="#">2021</year>
+                <year href="#">2022</year>
+                <year href="#">&raquo;</year>
+            </div>
+            <div id="no-data" class="mt-4 p-4 ml-2 detail-info">
+                <p > No shopping list from this period</p>
             </div>
         </div>
         <div class="table-scroll month-table">
-            <table class="sortable list-table food-list" id = "nov-history-shopping-list">
+            <div class="shopping-list-item" id="nov-list">
+            <table class=" list-table food-list" id = "nov-history-shopping-list">
                 <tr>
-                    <th colspan="2">Created on: Nov/29/2021 </th>
+                    <th colspan="2">
+                        Created on: Nov/30/2021
+                        <span id="detail-btn" onclick="goToDetail(0)" type="button"><p>Details ></p></span>
+                     </th>
                 </tr>
                 <tr>
                     <th style="width: 60%;">Item</th>
                     <th style="width: 40%;">Qty</th>
                 </tr>
+                
             </table>
+            </div>
             <div id = "oct-history-shopping-list">
-                <table class="sortable list-table food-list" >
+                <div class="shopping-list-item">
+                <table class="list-table food-list" >
                     <tr>
-                        <th colspan="2">Created on: Oct/25/2021 </th>
+                        <th colspan="2">Created on: Oct/29/2021 
+                        <span id="detail-btn" onclick="goToDetail(1)" type="button"><p>Details ></p></span>
+                        </th>
                     </tr>
                     <tr>
                         <th style="width: 60%;">Item</th>
@@ -110,14 +155,15 @@
                         <td>peach</td>
                         <td>6 lbs</td>
                     </tr>
-                    <tr>
-                        <td>bacon</td>
-                        <td>10 lbs</td>
-                    </tr>
                 </table>
-                <table class="sortable list-table food-list" style="margin-top:15px">
+                </div>
+                <div class="shopping-list-item">
+                <table class="list-table food-list" style="margin-top:15px">
                     <tr>
-                        <th colspan="2">Created on: Oct/29/2021 </th>
+                        <th colspan="2">Created on: Oct/25/2021 
+                        <span id="detail-btn" onclick="goToDetail(2)" type="button"><p>Details ></p></span>
+                        </th>
+                    
                     </tr>
                     <tr>
                         <th style="width: 60%;">Item</th>
@@ -136,13 +182,48 @@
                         <td>6 lbs</td>
                     </tr>
                 </table>
+                </div>
+            </div>
+            <div id = "oct-history-shopping-list-2">
+                <div class="shopping-list-item">
+                <table class=" list-table food-list" >
+                    <tr>
+                        <th colspan="2">Created on: Oct/23/2021 
+                        <span id="detail-btn" onclick="goToDetail(3)" type="button"><p>Details ></p></span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th style="width: 60%;">Item</th>
+                        <th style="width: 40%;">Qty</th>
+                    </tr>
+                    <tr>
+                        <td>apple juice</td>
+                        <td>10 lbs</td>
+                    </tr>
+                    <tr>
+                        <td>orange juice</td>
+                        <td>5 lbs</td>
+                    </tr>
+                    <tr>
+                        <td>broccolli</td>
+                        <td>6 lbs</td>
+                    </tr>
+                </table>
+                </div>
             </div>
             
-            <div class="col-md-10 col-12">
+            <div class="col-md-10 col-12" id="oct-pagni">
                 <div class="pagination">
                     <page href="#">&laquo;</page>
-                    <page href="#">1</page>
-                    <page class="active" href="#">2</page>
+                    <page href="#" id="pagiPage1" onclick="selectPage1()">1</page>
+                    <page href="#" id="pagiPage2" onclick="selectPage2()">2</page>
+                    <page href="#">&raquo;</page>
+                </div>
+            </div>
+            <div class="col-md-10 col-12" id="nov-pagni">
+                <div class="pagination">
+                    <page href="#">&laquo;</page>
+                    <page href="#" id="pagiPage1" class="active">1</page>
                     <page href="#">&raquo;</page>
                 </div>
             </div>
