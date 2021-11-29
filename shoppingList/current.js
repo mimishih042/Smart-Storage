@@ -148,12 +148,16 @@ function setList() {
 
 function hideNewItemDialog() {
     var dialog = document.getElementById("New-Item-Dialog");
+    var darkenBg = document.getElementById("darken-bg-id");
     dialog.style.display = "none";
+    darkenBg.style.display = "none";
 }
 
 function showNewItemDialog() {
     var dialog = document.getElementById("New-Item-Dialog");
+    var darkenBg = document.getElementById("darken-bg-id");
     dialog.style.display = "block";
+    darkenBg.style.display = "block";
 }
 
 

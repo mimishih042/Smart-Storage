@@ -33,7 +33,7 @@
 <body>
     <div class="row">
         <div class="col-12">
-            <h2 class="food-list-align">Your Shopping List</h2>
+            <h2 class="food-list-align">Shopping List</h2>
         </div>
         <div class="tab-example mb-4">
             <div class="tab shopping-tab">
@@ -188,8 +188,8 @@
                     <page href="#">&raquo;</page>
                 </div>
             </div>
-            <div class="col-md-10 col-12" id="nov-pagni">
-                <div class="pagination" style="padding-left: 26%;">
+            <div class="col-12 mt-3" id="nov-pagni">
+                <div class="pagination" style="padding-left: 32%;">
                     <page href="#">&laquo;</page>
                     <page href="#" id="pagiPage1" class="active">1</page>
                     <page href="#">&raquo;</page>
@@ -197,24 +197,37 @@
             </div>
         </div>
     </div>
+
     <div class="row navbar ">
         <div class="ss-navbar ss-app-navbar">
-            <button class="navbar-button">
-                <img src="../assets/navbar/camera.svg" >
-                <p class="navbar-p  mt-1">Camera</p>
-            </button>
-            <button class="navbar-button">
-                <img src="../assets/navbar/shopping.svg" class="navbar-button-clicked">
-                <p class="navbar-p navbar-p-clicked mt-1">Shopping List</p>
-            </button>
-            <button class="navbar-button">
-                <img src="../assets/navbar/inventory.svg">
-                <p class="navbar-p mt-1">Inventory</p>
-            </button>
-            <button class="navbar-button">
-                <img src="../assets/navbar/settings.svg">
-                <p class="navbar-p">Settings</p>
-            </button>
+            <a href="../takePicture/choosePicture.html">
+                <button class="navbar-button">
+                    <img src="../assets/navbar/camera.svg" >
+                    <p class="navbar-p  mt-1">Camera</p>
+                </button>
+            </a>
+            
+            <a href="./current.html">
+                <button class="navbar-button">
+                    <img src="../assets/navbar/shopping.svg" class="navbar-button-clicked">
+                    <p class="navbar-p navbar-p-clicked mt-1">Shopping List</p>
+                </button>
+            </a>
+            
+            <a href="../index.html">
+                <button class="navbar-button">
+                    <img src="../assets/navbar/inventory.svg">
+                    <p class="navbar-p mt-1">Inventory</p>
+                </button>
+            </a>
+            
+            <a href="../settings.html">
+                <button class="navbar-button">
+                    <img src="../assets/navbar/settings.svg">
+                    <p class="navbar-p">Settings</p>
+                </button>
+            </a>
+            
         </div>
 
     </div>
