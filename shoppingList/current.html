@@ -31,10 +31,32 @@
     }
 </style>
 
-<body>
+<body style="background-color: rgba(255, 255, 255, 0);">
     <div class="row">
         <div class="col-md-6 col-12">
             <h2 class="food-list-align">Your food list</h2>
+        </div>
+        <div class="col-md-10 col-12">
+            <div class="dialog-elem" id="New-Item-Dialog">
+                <img src="../assets/Icons/Edit.svg">
+                <div class="dialog-space" style="position: absolute; z-index: 1000; top: 25%; left: 13%; margin-right: auto;">
+                    <h6 style="color: #804F1E;">Add New Item</h6>
+                    <div class="mt-3">
+                        <p class="style-guide-p">Item</p>
+                        <input class="search" type="text" id="input-item" placeholder="Item">
+                    </div>
+                    <div class="mt-3">
+                        <p class="style-guide-p">Qty</p>
+                        <input class="search" type="text" id="input-qty" placeholder="">
+                    </div>
+                    <div>
+                        <button type="button" class="default-btn" id = "Confirm-item" style="width: 50%;"
+                        onclick="addNewItem()">Confirm</button>
+                        <button type="button" class="default-btn" id = "Cancel-item" style="width: 50%;"
+                        onclick="hideNewItemDialog()">Cencel</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="row tab-example mb-4">
           
@@ -53,12 +75,14 @@
             </table>
         </div>
     </div>
+    
     <div class="col-md-6 col-12">
         <div>
-            <button type="button" class="default-btn" id = "Add-to-Purchased">Add to Purchased</button>
+            <button type="button" class="default-btn" id = "Add-New-Item" style="width: 50%;"
+            onclick="showNewItemDialog()">Add New Item</button>
+            <button type="button" class="default-btn" id = "Add-to-Purchased"style="width: 50%;">Add to Purchased</button>
         </div>
     </div>
-
     <div class="row navbar ">
         <div class="ss-navbar ss-app-navbar">
             <button class="navbar-button">

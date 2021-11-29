@@ -146,8 +146,33 @@ function setList() {
     }
 }
 
+function hideNewItemDialog() {
+    var dialog = document.getElementById("New-Item-Dialog");
+    dialog.style.display = "none";
+}
+
+function showNewItemDialog() {
+    var dialog = document.getElementById("New-Item-Dialog");
+    dialog.style.display = "block";
+}
+
+
+function addNewItem() {
+    var newItem = document.getElementById("input-item").value;
+    var newQty = document.getElementById("input-qty").value;
+    list.push({name: newItem,
+                qty: newQty,
+                expiration:"12/2/2021",
+                id:10})
+    hideNewItemDialog();
+    renderList(list);
+    document.getElementById("input-item").value = "";
+    document.getElementById("input-qty").value = "";
+}
+
 function main() {
     setTabLink();
+    hideNewItemDialog();
     setList()
     renderList(list);
     addToPushased();
