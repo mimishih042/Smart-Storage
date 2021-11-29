@@ -6,9 +6,24 @@ html {
     margin: 3rem;
 }
 
-.app-html {
-    margin: 2rem;
+a {
+    text-decoration: none;
 }
+
+.app-html {
+    margin-top: 3rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* .recipe-bg-html {
+    background: url(./assets/recipe-black.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} */
 
 @font-face {
     font-family: MigraReg;
@@ -113,7 +128,7 @@ thead {
 
 .default-btn {
     height: 50px;
-    width: 90%;
+    width: 100%;
     background: #FF5E00;
     color: white;
     border-radius: 50px;
@@ -122,7 +137,7 @@ thead {
 
 .disabled-btn {
     height: 50px;
-    width: 90%;
+    width: 100%;
     background: #DEDEDE;
     color: #747474;
     border-radius: 50px;
@@ -141,6 +156,22 @@ thead {
     background-repeat: no-repeat;
     background-size: 18px 18px;
     background-position: 95% center;
+    border-radius: 50px;
+    border: 1px solid #804F1E;
+}
+
+.new-item {
+    width: 90%;
+    padding: 12px 24px;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 18px;
+    color: #804F1E;
+    /* background-color: transparent;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center; */
     border-radius: 50px;
     border: 1px solid #804F1E;
 }
@@ -264,6 +295,7 @@ thead {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 2;
 }
 
 .navbar-elem {
@@ -461,10 +493,11 @@ thead {
 .year-table year {
     color: #804F1E;
     float: left;
-    padding: 8px 16px;
+    padding: 8px 19px;
     text-decoration: none;
     border: 1px solid #DFE3E8;
     border-radius: 5px;
+    
 }
 
 
@@ -475,6 +508,8 @@ thead {
 }
 
 table.month-table {
+    margin-left: auto;
+    margin-right: auto;
     clear: both;
     display: block;
     border: none;
@@ -498,7 +533,8 @@ table.month-table td {
 }
 
 
-table.month-table td:focus {
+table.month-table td:focus, 
+table.month-table td:hover {
     padding: 1px;
     outline: 0;
     color: #fff;
@@ -616,17 +652,18 @@ table.list-table .input-counter input {
     border: none;
     border-bottom: 1px solid #DEDEDE;
     width: 25%;
+
 }
   
   /* Style the buttons that are used to open the tab content */
 .tab button {
     background-color: inherit;
-    float: left;
     border: none;
     outline: none;
     padding: 14px 16px;
     transition: 0.3s;
     color: #6D3805;
+    width: 50%;
 }
   
   /* Create an active/current tablink class */
@@ -686,7 +723,15 @@ table.food-list {
 }
 
 .table-scroll {
-    height:500px;
+    /* height:500px; */
+    height: 68vh;
+    overflow-y:auto;
+    padding-right: 0px;
+    padding-left: 0px;  
+    margin-bottom: 10px;
+}
+
+.table-scroll-generated-list {
     overflow-y:auto;
     padding-right: 0px;
     padding-left: 0px;  
@@ -714,4 +759,103 @@ table.recommend-table {
     text-align: center;
 }
 
+.camera-recipe-btn {
+    position: relative;
+    margin-top: 30vh;
+}
 
+.camera-recipe-btn button {
+    width: 100%;
+    height: 60px;
+    border-radius: 15px;
+}
+
+.take-picture-select-btn{
+    height: 120px;
+    border-radius: 15px;
+    align-items: center;
+    background: #FFF7EF;
+    color: #884c0d;
+}
+
+
+.take-photo-btn{
+    margin-left: 16px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+
+.video-insert {
+    margin-top: 10vh;
+    width: 100%;
+}
+.shopping-tab{
+    width:100% !important;
+    display:flex;
+    justify-content: space-around;
+}
+
+.drop-btn {
+    height: 40px;
+    width: 100%;
+    background: #FFE6CC;
+    color: #6D3805;
+    border-radius: 10px;
+    border-width: 0px;
+    display: inline-block;
+}
+
+
+.year-dropdown {
+    display: none;
+    position:relative
+}
+
+.month-dropdown {
+    display: none;
+    position:relative
+}
+
+.show {
+    display:block;
+}
+
+.hide {
+    display: none;
+}
+
+.darken-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* semi-transparent black  */
+    background-color: #000;
+    opacity: 0.6;
+
+    /* z-index must be below .modal and above everything else  */
+    z-index: 1;
+}
+.shopping-list-item {
+    overflow: hidden;
+    padding: 10px;
+}
+
+.shopping-list-item span {
+
+    height: auto !important;
+    float: right;
+
+}
+.shopping-list-item span p {
+    color: #FF5E00;
+    margin-bottom: 5px;
+}
+
+.detail-info {
+    background: #FFF7EF;
+    border-radius: 10px;
+}
