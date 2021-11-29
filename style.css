@@ -17,13 +17,13 @@ a {
     margin-bottom: 1.5rem;
 }
 
-.recipe-bg-html {
+/* .recipe-bg-html {
     background: url(./assets/recipe-black.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
+} */
 
 @font-face {
     font-family: MigraReg;
@@ -279,6 +279,7 @@ thead {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 2;
 }
 
 .navbar-elem {
@@ -805,4 +806,19 @@ table.recommend-table {
 
 .hide {
     display: none;
+}
+
+.darken-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* semi-transparent black  */
+    background-color: #000;
+    opacity: 0.6;
+
+    /* z-index must be below .modal and above everything else  */
+    z-index: 1;
 }

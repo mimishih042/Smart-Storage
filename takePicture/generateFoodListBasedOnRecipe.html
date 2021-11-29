@@ -233,35 +233,29 @@
 <body>
     <div class="row">
         <div>
-            <a href="./pictureForFood.html">
+            <a href="./pictureForRecipe.html">
                 <span id="back"><img src="../assets/back_btn.png" class="back-btn pb-2"></span>
             </a>
-            <h2 class="recommend-header" style="text-align: center;">Your food list</h2>
+            <h2 class="recommend-header" style="text-align: center; margin-left: 30px; font-size: 1.9rem;">New Shopping List</h2>
         </div>
 
-        <div class="table-scroll" style="height: 65vh;">
+        <div class="table-scroll" style="height: 58vh;">
             <table class="sortable list-table food-list">
                 <tr>
                     <th style="width: 40%;">Food</th>
-                    <th style="width: 30%;">Curr</th>
-                    <th style="width: 30%;">Qty</th>
+                    <th style="width: 30%;">Current Inventory</th>
+                    <th style="width: 30%;">Suggested Qty</th>
                 </tr>
                 <tr>
                     <td>
-                        Egg
+                        Bread
                     </td>
                     <td>
-                        <div class="mt-3">
-                            <div class="input-counter">
-                                <span class="minus-btn" onclick="firstItemMinus()">-</span>
-                                <input id="item1" type="text" value="40">
-                                <span class="plus-btn" onclick="firstItemPlus()">+</span>
-                            </div>
-                        </div>
+                        40
                     </td>
 
                     <td onclick="pickDate1()">
-                        <p class="date-in-list" id="date1">100</p>
+                        <p class="date-in-list" id="date1" style="margin-top: revert;">100</p>
                         <form class="change-date-form" id="changeDateForm1">
                             <input type="text" class="date-input" id="newDateInput1" name="newDateInput1"
                                 value="100"><br>
@@ -270,20 +264,13 @@
                 </tr>
                 <tr>
                     <td>
-                        Salt
-                        <br>(lb)
+                        garlic
                     </td>
                     <td>
-                        <div class="mt-3">
-                            <div class="input-counter">
-                                <span class="minus-btn" onclick="secondItemMinus()">-</span>
-                                <input id="item2" type="text" value="5">
-                                <span class="plus-btn" onclick="secondItemPlus()">+</span>
-                            </div>
-                        </div>
+                        5
                     </td>
                     <td onclick="pickDate2()">
-                        <p id="date2" class="date-in-list">1</p>
+                        <p id="date2" class="date-in-list" style="margin-top: revert;">1</p>
                         <form class="change-date-form" id="changeDateForm2">
                             <input type="text" class="date-input" id="newDateInput2" name="newDateInput2"
                                 value="1"><br>
@@ -292,20 +279,13 @@
                    
                 </tr>
                 <tr>
-                    <td>Pepper
-                        <br>(lb)
+                    <td>Egg
                     </td>
                     <td>
-                        <div class="mt-3">
-                            <div class="input-counter">
-                                <span class="minus-btn" onclick="thirdItemMinus()">-</span>
-                                <input id="item3" type="text" value="5">
-                                <span class="plus-btn" onclick="thirdItemPlus()">+</span>
-                            </div>
-                        </div>
+                        6
                     </td>
                     <td onclick="pickDate3()">
-                        <p id="date3" class="date-in-list">1</p>
+                        <p id="date3" class="date-in-list" style="margin-top: revert;">1</p>
                         <form class="change-date-form" id="changeDateForm3">
                             <input type="text" class="date-input" id="newDateInput3" name="newDateInput3"
                                 value="1"><br>
@@ -314,19 +294,13 @@
                 </tr>
 
                 <tr>
-                    <td>Tomato
+                    <td>Bacon</br>(pack)
                     </td>
                     <td>
-                        <div class="mt-3">
-                            <div class="input-counter">
-                                <span class="minus-btn" onclick="fourthItemMinus()">-</span>
-                                <input id="item4" type="text" value="50">
-                                <span class="plus-btn" onclick="fourthItemPlus()">+</span>
-                            </div>
-                        </div>
+                        50
                     </td>
                     <td onclick="pickDate4()">
-                        <p id="date4" class="date-in-list">50</p>
+                        <p id="date4" class="date-in-list" style="margin-top: revert;">50</p>
                         <form class="change-date-form" id="changeDateForm4">
                             <input type="text" class="date-input" id="newDateInput4" name="newDateInput4"
                                 value="50"><br>
@@ -335,20 +309,14 @@
                 </tr>
 
                 <tr>
-                    <td>Spinach
-                        <br>(lb)
+                    <td>Thyme
+                        <br>(lbs)
                     </td>
                     <td>
-                        <div class="mt-3">
-                            <div class="input-counter">
-                                <span class="minus-btn" onclick="fifthItemMinus()">-</span>
-                                <input id="item5" type="text" value="30">
-                                <span class="plus-btn" onclick="fifthItemPlus()">+</span>
-                            </div>
-                        </div>
+                        30
                     </td>
                     <td onclick="pickDate5()">
-                        <p id="date5" class="date-in-list">20</p>
+                        <p id="date5" class="date-in-list" style="margin-top: revert;">20</p>
                         <form class="change-date-form" id="changeDateForm5">
                             <input type="text" class="date-input" id="newDateInput5" name="newDateInput5"
                                 value="20"><br>
@@ -357,34 +325,28 @@
                 </tr>
 
                 <tr>
-                    <td>Sausage
+                    <td>Chive</br>(lbs)
                     </td>
                     <td>
-                        <div class="mt-3">
-                            <div class="input-counter">
-                                <span class="minus-btn" onclick="sixItemMinus()">-</span>
-                                <input id="item6" type="text" value="20">
-                                <span class="plus-btn" onclick="sixItemPlus()">+</span>
-                            </div>
-                        </div>
+                        20
                     </td>
                     <td onclick="pickDate6()">
-                        <p id="date6" class="date-in-list">20</p>
+                        <p id="date6" class="date-in-list" style="margin-top: revert;">20</p>
                         <form class="change-date-form" id="changeDateForm6">
                             <input type="text" class="date-input" id="newDateInput6" name="newDateInput6"
-                                value="20"><br>
+                                value="20">
                         </form>
                     </td>
                 </tr>
             </table>
-            <div>
-                <br>
-                <br>
-            </div>
-            <div>
-                <button type="button" class="default-btn" style="width: 100%;">Confirm and add to shopping list</button>
+        </div>
+
+        <div>
+            <button type="button" class="default-btn" style="width: 100%;">Confirm and add to shopping list</button>
+            <a href="./choosePicture.html">
                 <button type="button" class="default-btn mt-3" style="background-color: #FFF7EF; color: #804F1E; width: 100%;">Cancel</button>
-            </div>
+
+            </a>
         </div>
     </div>
 
