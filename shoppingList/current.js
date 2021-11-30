@@ -134,7 +134,10 @@ function addToPushased() {
     addPurchased.addEventListener('click',() => {
         decideBtnColor()
         let uncheckedItem = list.filter(x => !items.includes(x));
-        renderList(uncheckedItem);
+        var dialog = document.getElementById("Confirm-Dialog");
+        var darkenBg = document.getElementById("darken-bg-id");
+        dialog.style.display = "block";
+        darkenBg.style.display = "block";
     }) 
 }
 
@@ -152,6 +155,15 @@ function hideNewItemDialog() {
     dialog.style.display = "none";
     darkenBg.style.display = "none";
 }
+
+function hideConfirmDialog() {
+    var dialog = document.getElementById("Confirm-Dialog");
+    var darkenBg = document.getElementById("darken-bg-id");
+    dialog.style.display = "none";
+    darkenBg.style.display = "none";
+    renderList(uncheckedItem);
+}
+
 
 function showNewItemDialog() {
     var dialog = document.getElementById("New-Item-Dialog");
@@ -182,5 +194,6 @@ function main() {
     setList()
     renderList(list);
     addToPushased();
+    hideConfirmDialog();
 }
 document.addEventListener('DOMContentLoaded', main);
