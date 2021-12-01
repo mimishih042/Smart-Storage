@@ -136,6 +136,7 @@ function addToPushased() {
         let uncheckedItem = list.filter(x => !items.includes(x));
         var dialog = document.getElementById("Confirm-Dialog");
         var darkenBg = document.getElementById("darken-bg-id");
+        renderList(uncheckedItem);
         dialog.style.display = "block";
         darkenBg.style.display = "block";
     }) 
@@ -159,9 +160,11 @@ function hideNewItemDialog() {
 function hideConfirmDialog() {
     var dialog = document.getElementById("Confirm-Dialog");
     var darkenBg = document.getElementById("darken-bg-id");
+    
     dialog.style.display = "none";
     darkenBg.style.display = "none";
-    renderList(uncheckedItem);
+    console.log(uncheckedItem)
+    
 }
 
 
@@ -194,6 +197,7 @@ function main() {
     setList()
     renderList(list);
     addToPushased();
+    
     hideConfirmDialog();
 }
 document.addEventListener('DOMContentLoaded', main);
