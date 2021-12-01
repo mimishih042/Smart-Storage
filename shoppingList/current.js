@@ -163,7 +163,7 @@ function hideConfirmDialog() {
     
     dialog.style.display = "none";
     darkenBg.style.display = "none";
-    console.log(uncheckedItem)
+
     
 }
 
